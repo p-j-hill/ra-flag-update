@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasonable Adjustments - prototype</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+        
+      <div class="grid-x grid-padding-x">
+            <div class="cell small-3 medium-6 large-6"><br/><h5><a href="index.html">HERSCHEL, Caroline (Mrs)</a></h5></div>
+            <div class="cell small-3 medium-2 large-2"><br/>Born 16-Mar-1950</div>
+            <div class="cell small-3 medium-2 large-2"><br/>Gender: Female</div>
+            <div class="cell small-3 medium-2 large-2"><br/>NHS No. 456 489 9118</div>
+      </div>
+        
+      <div class="grid-x grid-padding-x">
+            <div class="cell small-12 medium-12 large-12">Address: 19 New King Street Bath BA1 2BL<br/><br/></div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="large-8 cell">
+            <form>
+            <fieldset class="large-6 cell fieldset">
+                <legend><strong>1. Consent for reasonable adjustments</strong></legend>
+                    <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Patient</label><br/>
+                    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Patient's legal proxy</label><br/>
+                    <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Consent for reasonable adjustments</label>
+                <div id="reason" class="large-6 medium-6 cell hide">
+                <label>Details of best interest
+                <input type="text" name="flavor">
+                </label>
+            </div>
+            </fieldset>
+        </div>
+      </div>
+        
+      <div class="grid-x grid-padding-x">
+        <div class="large-8 cell">
+            <fieldset class="large-6 cell fieldset">
+                <legend><strong>2. Reasonable adjustment</strong></legend>
+                    <label>Summary of the reasonable adjusment
+                        <textarea placeholder="" required pattern="alpha_numeric"></textarea>
+                    </label><br/>
+                
+                <label>Which of the following summarise the requirement of the reasonable adjustment</label><br/>
+
+                <div class="small button-group" >
+                    <a id="button1" data-toggle="button1" class="button hollow" data-toggler=".success hollow">Additional time</a>&nbsp;&nbsp;
+                    <a id="button2" data-toggle="button2" class="button hollow" data-toggler=".success hollow">Environment</a>&nbsp;&nbsp;
+                    <a id="button3" data-toggle="button3" class="button hollow" data-toggler=".success hollow">Communcation needs</a>&nbsp;&nbsp;
+                    <a id="button4" data-toggle="button4" class="button small hollow" data-toggler=".success hollow">Carer support</a>&nbsp;&nbsp;
+                    <a id="button5" data-toggle="button5" class="button small hollow" data-toggler=".success hollow">Policy adaption</a>&nbsp;&nbsp;
+                    <a id="button6" data-toggle="button6" class="button small hollow" data-toggler=".success hollow">Clinical procedure</a>
+</div>
+
+            </fieldset>
+        </div>
+      </div>
+ 
+            <fieldset class="large-6 columns">
+      <button class="button" type="submit" value="Submit">Submit</button>
+    </fieldset>
+    <fieldset class="large-6 columns">
+      <button class="button clear" type="reset" value="Reset">Reset</button>
+    </fieldset>
+          
+        </form>
+        
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+      <script>
+    jQuery("input[name=pokemon]").click(function () {
+  jQuery("#reason").toggleClass("hide", this.value !== "Yellow"); 
+});
+  //# sourceURL=pen.js
+  </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasonable Adjustments - prototype</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <h1>Reasonable adjustments</h1>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell"><br/>
+                <ul>
+                    <!--    <li><strike><a href="prototype-1-patient-details.html">UJ 1</a></strike> - Patient has RA flag - user doesn't have RBAC permission to view</li> -->
+                    <li><a href="prototype-1-b-ra.html">UJ 1B</a> - Patient has RA flag - user doesn't have RBAC permission to view</li>
+                    <li><a href="prototype-2-patient-details.html">UJ 2</a> - Patient has RA flag - user has RBAC permission to view</li>
+                    <li><a href="prototype-3-patient-details.html">UJ 3</a> - Creating an RA flag </li>
+                    <!--       <li><strike><a href="prototype-3-c-ra.html">UJ 3c</a></strike> - Creating an RA flag - <small><span style="color: #009C9C !important;"> added 20-Mar-2018</span></small></li> -->
+                    <li><a href="prototype-4-ra.html">UJ 4</a> - Deleting an RA flag</li>
+                    <li><a href="prototype-4-ra.html">UJ 4b</a> - Deleting a patient impairment</li>
+                    <li><a href="prototype-4-ra.html">UJ 4c</a> - Deleting a reasonable adjustment</li>
+                    <li><a href="prototype-4-ra.html">UJ 4d</a> - Adding a reasonable adjustment</li>
+                    <li><a href="prototype-4-ra-one-impairment.html">UJ 4e</a> - Adding a patient impairment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell"><br/>
+                <p style="font-weight: bold;">To do list:</p>
+                <ul>
+                    <li><strike>Remove 'Other reason' from 'Create flag' consent options</strike></li>
+                    <li><strike>Move 'Patient would prefer not to say' to bottom of presenting need list</strike></li>
+                    <li><strike>Create alternatives for UJ1 - wording and/or layout</strike></li>
+                    <li><strike>Create alternative for inputs for adding individual adjustments</strike></li>
+                    <li><strike>Create alternative for Flag created module</strike></li>
+                    <li><strike>Remove Anonymous reporting consent creation</strike></li>
+                    <li><strike>Remove Anonymous reporting consent display</strike></li>
+                    <li><strike>Remove second sentence in bullet 2 Create 1 of 3</strike></li>
+                    <li><strike>Allow multiple selections of conditions</strike></li>
+                    <li><strike>Add RA UI - Manifest the top 10 RAs - Cant find it = either search or free input</strike></li>
+                    <li><strike>Retain chosen RA of supporting detail page</strike></li>
+                    <li><strike>Remove last updated panel from 'UJ1'</strike></li>
+                    <li><strike>Remove patients proxy option from Creation consent</strike></li>
+                    <li><strike>Add a reasonable adjustment</strike></li>
+                    <li><strike>Include the author and org details of the individual who created each presenting need</strike></li>
+                    <li><strike>Impairment wording change</strike></li>
+                    <li><strike>Updated category names</strike></li>
+                    <li><strike>Tooltip on hover to show category description</strike></li>
+                    <li><strike>None of the above is Generic Reasonable adjustment with the single generic adjustment code</strike></li>
+                    <li><strike>Add selected code to the free text input screen</strike></li>
+                    <li><strike>Remove a reasonable adjustment</strike></li>
+                    <li><strike>Remove an RA Flag - Agree removal functionality and associated wording</strike></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell"><br/>
+                <p>Updated: <strong>20-Jun-18</strong></p>
+                <p><a href="mailto:jon.maher@nhs.net">jon.maher@nhs.net</a></p><br/>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
+        });
+        //# sourceURL=pen.js
+
+    </script>
+</body>
+
+</html>

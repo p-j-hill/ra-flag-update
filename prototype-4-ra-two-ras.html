@@ -1,0 +1,727 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>RA Flag - UJ4</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/scra.css">
+    <link rel="stylesheet" href="css/foundation-icons.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<style>
+    .success {
+        color: white !important;
+    }
+
+    .toggle-bg {
+        background: #ececec;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-panel {
+        margin-bottom: 0px;
+    }
+
+    .tabs-panel.is-active {
+        background: transparent;
+        color: #415564;
+        border-radius: 0px;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    .tabs-content {
+        border: 0px;
+    }
+
+    .tabs-title>a:hover {
+        background: #e6e6e6;
+    }
+
+    .tabs-title>a:focus,
+    .tabs-title>a[aria-selected='true'] {
+        background: #005EB8;
+        color: white;
+    }
+
+</style>
+
+<body>
+
+    <a href="#" class="scrollToTop">Top</a>
+
+    <div id="masthead-2" class="grid-container full">
+        <div id="masthead-menu" class="grid-container">
+            <div class="grid-x grid-padding-x grid-margin-x">
+                <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+                    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+                    <div class="title-bar-title">
+                        <a href="index.html"><img src="/img/nhs-digital-logo-left.jpg" style="height: 20px;"> </a>&nbsp; SRCa
+                    </div>
+                    <a href="prototype-b.html" class="button hollow small" style="position: absolute; float: right; right: 10px;">Find patient</a>
+                </div>
+
+                <div class="top-bar" id="responsive-menu">
+                    <div class="top-bar-left">
+                        <ul class="dropdown menu show-for-large">
+                            <li><a href="index.html" style="padding: 0px;"><img src="/img/nhs-digital-logo-left.jpg" style="height: 40px;"></a></li>
+                            <li class="menu-text">Summary Care Record Application</li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="#0">Change role</a></li>
+                            <li><a href="#0">Help</a></li>
+                            <li><a href="#0">Exit</a></li>
+                            <li><button class="button hollow show-for-medium">Find patient</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div id="patient-summary" class="grid-x grid-padding-x">
+            <div id="summary-name" class="small-6 medium-shrink cell small-order-1 summary-panel">
+                <span class="summary-label">Full name:</span><br/><span class="summary-info">William Shakespeare</span>
+            </div>
+            <div id="summary-gender" class="small-6 medium-shrink cell small-order-3 summary-panel">
+                <span class="summary-label">Gender:</span><br/><span class="summary-info">Male</span>
+            </div>
+            <div id="summary-dob" class="small-6 medium-shrink cell small-order-4 summary-panel">
+                <span class="summary-label">DOB:</span><br/><span class="summary-info">17-Apr-1969</span>
+            </div>
+            <div id="summary-nhs" class="small-6 medium-shrink cell small-order-5 summary-panel">
+                <span class="summary-label">NHS No:</span><br/><span class="summary-info">123 45 45 45</span>
+            </div>
+            <div id="summary-address" class="medium-auto small-12 cell small-order-6 medium-order-6 summary-panel">
+                <span class="summary-label">Address:</span><br/><span class="summary-info">1 Henley Street, Stratford-upon-Avon, Warwickshire</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-wrapper" class="grid-container">
+        <div id="tabbies" class="grid-x" data-equalizer>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="prototype-4-patient-details.html" class="button tabby tabby-inactive" data-equalizer-watch>Patient details</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Chargeable status</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments <span class="badge alert">&nbsp;</span></a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a data-open="exampleModal1" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Summary Care Record </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-wrapper" class="grid-container">
+        <div class="grid-x">
+
+            <div id="in-page-content" class="cell">
+
+                <div class="grid-x grid-padding-x">
+                    <div class="cell"><br/>
+                        <div class="callout alert">
+                            <h4><i class="fi-alert"></i>&nbsp;Please consider reasonable adjustments for this patient</h4>
+                            <p>The Equality Act (2010) states the NHS and other public organisations have a duty to provide equal access to all services. This is called making reasonable adjustments. For example, providing wheelchair access. The Reasonable Adjustment Flag provides details of the reasonable adjustments that should be considered when providing care for a patient
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 medium-12 cell">
+                        <fieldset class="fieldset">
+                            <!--   <legend>Patient impairment(s) to consider when making adjustments:</legend> -->
+                            <span class="panel-main-label">Patient impairment(s) to consider when making adjustments:</span>
+                            <hr>
+                            <div id="panel-key" class="grid-x">
+                                <div class="medium-12 large-12 cell">
+                                    <div class="panel-info-group cell">
+                                        <table width="100%" class="hover stack">
+                                            <thead>
+                                                <tr>
+                                                    <th width="20%;">Patient impairment</th>
+                                                    <th width="40%;">Additional detail</th>
+                                                    <th>Added</th>
+                                                    <th>...</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-ra">Learning Disability</td>
+                                                    <td class="table-detail">William as a severe learning disability</td>
+                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
+                                                    </td>
+                                                    <td class="table-cta">
+                                                        <div class="medium-12 small-12 large-12 cell">
+
+                                                            <a class="button hollow alert small expanded">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-ra">Sensory Disability</td>
+                                                    <td class="table-detail">William has a severe visual impairment
+                                                    </td>
+                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
+                                                    </td>
+                                                    <td class="table-cta">
+                                                        <div class="medium-12 small-12 large-12 cell">
+                                                            <a class="button hollow alert small expanded">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="medium-12 small-12 large-12 cell">
+                                        <a class="button primary" style="margin-bottom: 0; float: right; margin-right: 0px;">Add patient impairment</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 medium-12 cell">
+                        <fieldset class="fieldset">
+                            <!--  <legend>Potential adjustments:</legend> -->
+                            <span class="panel-main-label">Potential adjustments:</span>
+                            <hr>
+                            <div id="panel-key" class="grid-x">
+                                <div class="medium-12 large-12 cell">
+                                    <div class="panel-info-group cell">
+                                        <div class="medium-12 small-12 large-12 cell">
+                                            <table width="100%" class="hover stack">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="20%;">Reasonable adjustment</th>
+                                                        <th width="40%;">Additional detail</th>
+                                                        <th>Category</th>
+                                                        <th>Updated</th>
+                                                        <th>...</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="table-ra">Reasonable Adjustment</td>
+                                                        <td class="table-detail">William needs to be supported by his keyworker for all health appointments – contact number 01234 567 890</td>
+                                                        <td class="table-category">Carer Support</td>
+                                                        <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
+                                                        </td>
+                                                        <td class="table-cta">
+                                                            <div class="medium-12 small-12 large-12 cell">
+                                                                <a class="button hollow primary small expanded">Edit</a>
+                                                            </div>
+                                                            <div class="medium-12 small-12 large-12 cell">
+
+                                                                <a class="button hollow alert small expanded">Delete</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-ra">Best interest decision made on behalf of patient (Mental Capacity Act)</td>
+                                                        <td class="table-detail">William needs all health interventions explained in simple terms and shared in written / diagrammatic form to help him understand, remember and consent
+                                                        </td>
+                                                        <td class="table-category">Communication Needs</td>
+                                                        <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
+                                                        </td>
+                                                        <td class="table-cta">
+                                                            <div class="medium-12 small-12 large-12 cell">
+                                                                <a class="button hollow primary small expanded">Edit</a>
+                                                            </div>
+                                                            <div class="medium-12 small-12 large-12 cell">
+
+                                                                <a class="button hollow alert small expanded">Delete</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a class="button primary" style="margin-bottom: 0; float: right;" data-open="exampleModal1">Add reasonable adjustment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-6 medium-12 cell">
+                        <fieldset class="fieldset">
+                            <span class="panel-main-label">Consent provided by:</span>
+                            <hr>
+                            <div id="panel-key" class="grid-x">
+                                <div class="medium-12 large-12 cell">
+                                    <div class="panel-info-group cell">
+                                        <p><strong>Reasonable Adjustment flag was created in the patient's best interest.</strong></p>
+                                        <p>This is the free text summary element of the patient's best interest. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum cursus ipsum et auctor. Integer pretium, purus vitae hendrerit commodo, magna risus feugiat dui, at vestibulum nulla ligula eu diam. </p>
+                                    </div>
+                                </div>
+                                <div class="medium-12 small-12 large-12 cell">
+                                    <a class="button hollow primary" style="margin-bottom: 0; float: right; margin-right: 0px;">Edit consent</a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="large-6 medium-6 cell">
+                        <fieldset class="fieldset">
+                            <span class="panel-main-label">Flag last updated:</span>
+                            <hr>
+                            <div id="panel-key" class="grid-x">
+                                <div class="medium-12 large-12 cell">
+                                    <div class="panel-info-group cell">
+                                        <p><strong>16-May-2017 at 11:03 AM</strong><br/><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/><br/>Tel: 0191 121121<br/>Email: <a href="#">email@address.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 medium-12 cell" style="text-align: center; margin: 20px 0px 20px 0px;">
+                        <a class="button alert large" data-open="confirm-delete-ra-flag">Remove Reasonable Adjustment flag</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="footer" class="grid-container">
+            <div class="grid-x grid-padding-x grid-margin-x">
+                <div class="cell">
+                    <strong>CONFIDENTIAL:</strong> PERSONAL PATIENT DATA acccessed by Inspector Clouseau - KIRKBY MANOR NH (8A819)
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="reveal large" id="exampleModal1" data-reveal>
+        <br/>
+        <h3>Add a Reasonable Adjustment </h3><br/>
+        <p> <strong>1.</strong> Choose <span style="text-decoration: underline;">one</span> of the following of categories of reasonable adjustment:</p>
+
+        <div class="grid-x">
+            <div class="medium-3 cell">
+                <ul class="vertical tabs" data-tabs id="example-tabs">
+                    <li class="tabs-title"><a href="#panel1v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Communicating with patients</span> </strong></a></li>
+                    <li class="tabs-title"><a href="#panel2v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches that will help ensure support levels are appropriate for this patient with their identified impairment">Additional Support</span></strong></a></li>
+                    <li class="tabs-title"><a href="#panel3v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches that will help meet specific individual needs for this patient with their identified impairment">Individual Care Requirements</span> </strong></a></li>
+                    <li class="tabs-title"><a href="#panel4v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches that will help provide the best environment for this patient with their identified impairment">Environment</span></strong></a></li>
+                    <li class="tabs-title"><a href="#panel6v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches that will help minimise specific risks for this patient with their identified impairment">Specific Clinical Risks</span></strong></a></li>
+                    <li class="tabs-title"><a href="#panel7v"><strong><span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Approaches not covered by other categories that will support achievement of an equitable and fair service delivery and outcome for the individual">Generic reasonable adjustment </span></strong></a></li>
+                </ul>
+            </div>
+            <div class="medium-9 cell">
+                <div class="tabs-content" data-tabs-content="example-tabs">
+                    <div class="tabs-panel" id="panel1v" style="max-height: 360px; overflow: scroll; border: 1px solid #e6e6e6;">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">	Does lip read 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon2" required><label for="pokemon2">	Does use communication device 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon3" required><label for="pokemon3">	Does use hearing aid 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon4" required><label for="pokemon4">	Preferred method of communication: written 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon5" required><label for="pokemon5">	Uses a citizen advocate 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon6" required><label for="pokemon6">	Uses a legal advocate 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon7" required><label for="pokemon7">	Uses alternative communication skill 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon8" required><label for="pokemon8">	Uses British sign language 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon9" required><label for="pokemon9">	Uses cued speech transliterator 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon10" required><label for="pokemon10">	Uses deafblind intervener 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon11" required><label for="pokemon11">	Uses Deafblind Manual Alphabet 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon12" required><label for="pokemon12">	Uses electronic note taker 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon13" required><label for="pokemon13">	Uses lipspeaker 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon14" required><label for="pokemon14">	Uses Makaton sign language 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon15" required><label for="pokemon15">	Uses manual note taker 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon16" required><label for="pokemon16">	Uses personal audio recording device to record information 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon17" required><label for="pokemon17">	Uses Personal Communication Passport 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon18" required><label for="pokemon18">	Uses sign language 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon19" required><label for="pokemon19">	Uses speech to text reporter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon20" required><label for="pokemon20">	Uses telecommunications device for the deaf 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon21" required><label for="pokemon21">	British Sign Language interpreter needed 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon22" required><label for="pokemon22">	Hands-on signing interpreter needed 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon23" required><label for="pokemon23">	Makaton Sign Language interpreter needed 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon24" required><label for="pokemon24">	Needs an advocate 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon25" required><label for="pokemon25">	Requires deafblind block alphabet interpreter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon26" required><label for="pokemon26">	Requires deafblind communicator guide 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon27" required><label for="pokemon27">	Requires deafblind haptic communication interpreter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon28" required><label for="pokemon28">	Requires deafblind manual alphabet interpreter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon29" required><label for="pokemon29">	Requires lip speaker 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon30" required><label for="pokemon30">	Requires manual note taker 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon31" required><label for="pokemon31">	Requires sighted guide 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon32" required><label for="pokemon32">	Requires speech to text reporter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon33" required><label for="pokemon33">	Sign Supported English interpreter needed 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon34" required><label for="pokemon34">	Visual frame sign language interpreter needed 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon35" required><label for="pokemon35">	Requires audible alert 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon36" required><label for="pokemon36">	Requires contact by email 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon37" required><label for="pokemon37">	Requires contact by letter 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon38" required><label for="pokemon38">	Requires contact by short message service text message 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon39" required><label for="pokemon39">	Requires contact by telephone 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon40" required><label for="pokemon40">	Requires contact by text relay 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon41" required><label for="pokemon41">	Requires contact via carer 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon42" required><label for="pokemon42">	Requires tactile alert 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon43" required><label for="pokemon43">	Requires visual alert 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon44" required><label for="pokemon44">	Requires healthcare information recording on personal audio recording device 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon45" required><label for="pokemon45">	Requires information by email 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon46" required><label for="pokemon46">	Requires information in contracted (Grade 2) Braille 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon47" required><label for="pokemon47">	Requires information in Easy read 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon48" required><label for="pokemon48">	Requires information in electronic audio format 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon49" required><label for="pokemon49">	Requires information in electronic downloadable format 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon50" required><label for="pokemon50">	Requires information in Makaton 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon51" required><label for="pokemon51">	Requires information in Moon alphabet 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon52" required><label for="pokemon52">	Requires information in uncontracted (Grade 1) Braille 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon53" required><label for="pokemon53">	Requires information on audio cassette tape 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon54" required><label for="pokemon54">	Requires information on compact disc 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon55" required><label for="pokemon55">	Requires information on digital versatile disc 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon56" required><label for="pokemon56">	Requires information on universal serial bus mass storage device 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon57" required><label for="pokemon57">	Requires information verbally 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon58" required><label for="pokemon58">	Requires third party to read out written information 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon59" required><label for="pokemon59">	Requires written information in at least 20 point sans serif font 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon60" required><label for="pokemon60">	Requires written information in at least 24 point sans serif font </label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon61" required><label for="pokemon61">	Consider adjustment to provide Easy Read information
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon62" required><label for="pokemon62">	Consider adjustment to communication for hearing  / sensory impairment
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon63" required><label for="pokemon63">	Consider adjustment to provide written reminders and advice
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon64" required><label for="pokemon64">	Consider adjustment to enable advocate to be present
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon65" required><label for="pokemon65">	Consider adjustment to incorporate use of Communications passports, Hospital or Care Passport 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon66" required><label for="pokemon66">	Consider adjustment for use of communication book / aid
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon67" required><label for="pokemon67">	Consider adjustment for atypical expression of pain
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon68" required><label for="pokemon68">	Consider adjustment to provide appointment reminders
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon69" required><label for="pokemon69">	Consider adjustment for carer to be present for all communication
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon70" required><label for="pokemon70">	Consider adjustment to communication as Patient likely to always respond in the positive
+
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon71" required><label for="pokemon71">	Consider Reasonable Adjustment for communication </label>
+
+                        </fieldset>
+                    </div>
+                    <div class="tabs-panel" id="panel2v" style="max-height: 360px; overflow: scroll; border: 1px solid #e6e6e6;">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Consider adjustment to ensure Patient not left alone
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon2" required><label for="pokemon2">Consider adjustment to involve Carers in all aspects of care 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon3" required><label for="pokemon3">Consider adjustment for Lasting Power of Attorney
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon4" required><label for="pokemon4">Consider adjustment to provide additional support at discharge
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon5" required><label for="pokemon5">Consider adjustment to provide support for visual /sensory impairment
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon6" required><label for="pokemon6">Consider adjustment to provide support for physical impairment
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon7" required><label for="pokemon7">Consider adjustment to provide support for severe mental illness
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon8" required><label for="pokemon8">Consider Reasonable Adjustment for additional support
+</label><br/>
+                        </fieldset>
+                    </div>
+                    <div class="tabs-panel" id="panel3v" style="max-height: 360px; overflow: scroll; border: 1px solid #e6e6e6;">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Consider adjustment to accommodate anticipatory care / crisis plan
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon2" required><label for="pokemon2">Consider adjustment to provide medications in specific formats
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon3" required><label for="pokemon3">Consider adjustment to provide dossette box
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon4" required><label for="pokemon4">Consider adjustment to provide Male only support 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon5" required><label for="pokemon5">Consider adjustment to provide Female only support
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon6" required><label for="pokemon6">Consider adjustment to provide first or last appointment
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon7" required><label for="pokemon7">Consider adjustment to provide Home Visits
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon8" required><label for="pokemon8">Consider adjustment to provide longer appointment 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon9" required><label for="pokemon9">Consider adjustment to provide distraction for any procedure
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon10" required><label for="pokemon10">Consider adjustment to provide additional time for decision making / processing
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon11" required><label for="pokemon11">Consider adjustment to accommodate high levels of anxiety
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon12" required><label for="pokemon12">Consider adjustment to provide desensitisation for any procedure
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon13" required><label for="pokemon13">Consider adjustment to provide pre outpatient or admission visit 
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon14" required><label for="pokemon14">Consider adjustment to accommodate needle phobia
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon15" required><label for="pokemon15">Consider adjustment to accommodate adverse reaction to uniforms / white coats
+</label><br/>
+                            <input type="radio" name="pokemon" value="1" id="pokemon16" required><label for="pokemon16">Consider Reasonable Adjustment to individual care requirements
+</label><br/>
+                        </fieldset>
+                    </div>
+                    <div class="tabs-panel" id="panel4v">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Adjust for low noise stimulus</label><br/>
+                            <input type="radio" name="pokemon" value="2" id="pokemon2"><label for="pokemon2">Adjust for single room</label><br/>
+                            <input type="radio" name="pokemon" value="3" id="pokemon3"><label for="pokemon3">Wheelchair access </label><br/>
+                            <input type="radio" name="pokemon" value="4" id="pokemon4" required><label for="pokemon4">Adjust for specialist equipment</label><br/>
+                            <input type="radio" name="pokemon" value="5" id="pokemon5"><label for="pokemon5">Adjust for low light stimulus</label><br/>
+                            <input type="radio" name="pokemon" value="6" id="pokemon6"><label for="pokemon6">Adjust / minimise waiting times</label><br/>
+                            <input type="radio" name="pokemon" value="7" id="pokemon7" required><label for="pokemon7">Reasonable adjustment to environment (see detail provided)</label><br/>
+                            <input type="radio" name="pokemon" value="8" id="pokemon8"><label for="pokemon8">Reasonable adjustment to environment (no detail provided)</label><br/>
+                        </fieldset>
+                    </div>
+                    <div class="tabs-panel" id="panel5v">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Offer first or last appointment</label><br/>
+                            <input type="radio" name="pokemon" value="2" id="pokemon2"><label for="pokemon2">Consider Home Visits</label><br/>
+                            <input type="radio" name="pokemon" value="3" id="pokemon3"><label for="pokemon3">Provide longer  appointment  </label><br/>
+                            <input type="radio" name="pokemon" value="4" id="pokemon4" required><label for="pokemon4">Provide additional time for decision making / processing</label><br/>
+                            <input type="radio" name="pokemon" value="5" id="pokemon5"><label for="pokemon5">Adjust for high levels of anxiety</label><br/>
+                            <input type="radio" name="pokemon" value="6" id="pokemon6"><label for="pokemon6">Consider desensitisation for any procedure</label><br/>
+                            <input type="radio" name="pokemon" value="7" id="pokemon7" required><label for="pokemon7">Consider pre outpatient or admission visit</label><br/>
+                            <input type="radio" name="pokemon" value="8" id="pokemon8"><label for="pokemon8">Reasonable adjustment to service delivery (see detail provided)</label><br/>
+                            <input type="radio" name="pokemon" value="9" id="pokemon9"><label for="pokemon9">Reasonable adjustment to service delivery (no detail provided)</label><br/>
+                        </fieldset>
+                    </div>
+                    <div class="tabs-panel" id="panel6v">
+                        <fieldset class="large-6 cell">
+                            <p><strong>2.</strong> Choose a reasonable adjustment:</p>
+                            <input type="radio" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Monitor for constipation</label><br/>
+                            <input type="radio" name="pokemon" value="2" id="pokemon2"><label for="pokemon2">Monitor for dehydration</label><br/>
+                            <input type="radio" name="pokemon" value="3" id="pokemon3"><label for="pokemon3">Monitor nutrition</label><br/>
+                            <input type="radio" name="pokemon" value="4" id="pokemon4" required><label for="pokemon4">Monitor for pressure sores</label><br/>
+                            <input type="radio" name="pokemon" value="5" id="pokemon5"><label for="pokemon5">Monitor for Dysphagia</label><br/>
+                            <input type="radio" name="pokemon" value="6" id="pokemon6"><label for="pokemon6">Monitor for self-harm</label><br/>
+                            <input type="radio" name="pokemon" value="7" id="pokemon7" required><label for="pokemon7">Monitor for epilepsy</label><br/>
+                            <input type="radio" name="pokemon" value="8" id="pokemon8"><label for="pokemon8">Reasonable adjustment for specific risks (see detail provided)</label><br/>
+                            <input type="radio" name="pokemon" value="9" id="pokemon9"><label for="pokemon9">Reasonable adjustment for specific risks (no detail provided) </label><br/>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <a class="button primary" href="#" data-open="exampleModal2">Next</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="exampleModal2" data-reveal>
+        <br/>
+        <h3>Add a Reasonable Adjustment</h3><br/>
+
+        <div class="grid-x">
+            <div class="cell">
+                <p>Add supporting detail for the <strong>[reasonable adjustment name]</strong> reasonable adjustment:</p>
+            </div>
+            <div class="medium-8 cell">
+                <textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea>
+            </div>
+        </div>
+
+        <a class="button primary" data-open="ra-add-confirm">Next</a> &nbsp;
+        <a class="button ghost" href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large ra-added" id="ra-add-confirm" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3>Please confirm you wish to add this reasonable adjustment</h3><br/>
+                <p>Any information entered will be shared nationally
+                </p>
+            </div>
+        </div>
+
+        <a class="button primary" href="prototype-3-b-ra-created-ra-added.html">Yes, I wish to add this reasonable adjustment</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Close</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large ra-added" id="exampleModal3" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3><i class="fi-check"></i> Reasonable adjustment successfully added</h3><br/>
+                <p>Add supporting detail for the reasonable adjustment:</p>
+            </div>
+        </div>
+
+        <a class="button ghost" href="#" data-close>Close</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="exampleModal4" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3 style="color: #009C9C !important;"><i class="fi-flag"></i> Reasonable adjustment flag successfully created</h3>
+                <p>Now you can add specific reasonable adjustments (PLACEHOLDER COPY)</p>
+                <a class="button primary" data-open="exampleModal1">Add a reasonable adjustment now</a> &nbsp; <a class="button ghost" href="#" data-close>I will add later</a>
+            </div>
+        </div>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="confirm-delete-ra" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3>Please confirm you wish to remove this Reasonable adjustment</h3><br/>
+            </div>
+        </div>
+
+        <a class="button primary" href="prototype-4-ra-removed.html">Yes, I wish to remove this reasonable adjustment</a> &nbsp;
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="confirm-delete-ra-flag" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3 style="color: red;"><i class="fi-alert"></i> Please confirm you wish to remove this Reasonable adjustment</h3><br/>
+                <p>This will delete the flag from the national record</p><br/>
+            </div>
+        </div>
+
+        <a class="button primary" href="prototype-4-ra-deleted.html">Yes, I wish to remove the reasonable adjustment flag</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vendor/top.js"></script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
+        });
+        //# sourceURL=pen.js
+
+    </script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason2").toggleClass("hide", this.value !== "Purple");
+        });
+        //# sourceURL=pen.js
+
+    </script>
+    <!-- <script>
+        $(document).foundation();
+        $(document).ready(function() {
+            $('#exampleModal3').foundation('open')
+        });
+
+    </script> -->
+</body>
+
+</html>

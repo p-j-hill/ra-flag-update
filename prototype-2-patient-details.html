@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>RA Flag - UJ2</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/scra.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+
+    <a href="#" class="scrollToTop">Top</a>
+
+    <div id="masthead-2" class="grid-container full">
+        <div id="masthead-menu" class="grid-container">
+            <div class="grid-x grid-padding-x grid-margin-x">
+                <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+                    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+                    <div class="title-bar-title">
+                        <a href="index.html"><img src="/img/nhs-digital-logo-left.jpg" style="height: 20px;"> </a>&nbsp; SRCa
+                    </div>
+                    <a href="prototype-b.html" class="button hollow small" style="position: absolute; float: right; right: 10px;">Find patient</a>
+                </div>
+
+                <div class="top-bar" id="responsive-menu">
+                    <div class="top-bar-left">
+                        <ul class="dropdown menu show-for-large">
+                            <li><a href="index.html" style="padding: 0px;"><img src="/img/nhs-digital-logo-left.jpg" style="height: 40px;"></a></li>
+                            <li class="menu-text">Summary Care Record Application</li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="#0">Change role</a></li>
+                            <li><a href="#0">Help</a></li>
+                            <li><a href="#0">Exit</a></li>
+                            <li><button class="button hollow show-for-medium">Find patient</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div id="patient-summary" class="grid-x grid-padding-x">
+            <div id="summary-name" class="small-6 medium-shrink cell small-order-1 summary-panel">
+                <span class="summary-label">Full name:</span><br/><span class="summary-info">William Shakespeare</span>
+            </div>
+            <div id="summary-gender" class="small-6 medium-shrink cell small-order-3 summary-panel">
+                <span class="summary-label">Gender:</span><br/><span class="summary-info">Male</span>
+            </div>
+            <div id="summary-dob" class="small-6 medium-shrink cell small-order-4 summary-panel">
+                <span class="summary-label">DOB:</span><br/><span class="summary-info">17-Apr-1969</span>
+            </div>
+            <div id="summary-nhs" class="small-6 medium-shrink cell small-order-5 summary-panel">
+                <span class="summary-label">NHS No:</span><br/><span class="summary-info">123 45 45 45</span>
+            </div>
+            <div id="summary-address" class="medium-auto small-12 cell small-order-6 medium-order-6 summary-panel">
+                <span class="summary-label">Address:</span><br/><span class="summary-info">1 Henley Street, Stratford-upon-Avon, Warwickshire</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-wrapper" class="grid-container">
+        <div id="tabbies" class="grid-x" data-equalizer>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#first" class="button tabby tabby-active" data-equalizer-watch>Patient details</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Chargeable status</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="prototype-2-ra.html" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Reasonable adjustments <span class="badge alert">&nbsp;</span></a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a data-open="exampleModal1" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Summary Care Record </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-wrapper" class="grid-container">
+        <div class="grid-x">
+            <div id="in-page-nav" class="cell show-for-medium">
+                <div id="in-page-nav-inner">
+                    <ul class="menu" data-magellan>
+                        <li><a href="#first" class="is-active">Key demographic</a></li>
+                        <li><a href="#second">GP &amp; care providers</a></li>
+                        <li><a href="#third">Contacts &amp; next of kin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="in-page-content" class="cell">
+
+                <div class="hide-for-medium cell">
+                    <select onChange="window.location.replace(this.options[this.selectedIndex].value)"> 
+                              <option value="">Navigate Patient details</option>
+                              <option value="#first">Key demographic</option>
+                              <option value="#second">GP &amp; care providers</option>
+                              <option value="#third">Contacts &amp; next of kin</option>
+                    </select>
+                    <br/><br/>
+                </div>
+
+                <section id="first" class="info-section" data-magellan-target="first">
+
+                    <!--        <br/>
+                    <h4>Key demographic</h4> -->
+
+                    <div class="grid-x grid-margin-x">
+
+                        <div class="large-6 medium-12 cell">
+
+                            <div class="large-6 medium-6 cell medium-order-1">
+
+                                <fieldset class="fieldset">
+                                    <!--  <legend>Name</legend> -->
+                                    <span class="panel-main-label">Name</span>
+                                    <hr>
+                                    <div class="grid-x">
+                                        <div class="medium-6 small-12 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Usual name:</span><br/><span class="panel-info">William Shakespeare</span><br/><span class="panel-info-note">Effective since: 17-Apr-1969</span>
+                                            </div>
+                                        </div>
+                                        <div class="medium-6 small-12 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Other names:</span><br/><span class="panel-info-none">Not recorded</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="large-6 medium-6 cell medium-order-3">
+
+                                <fieldset class="fieldset">
+                                    <!--  <legend>Name</legend> -->
+                                    <span class="panel-main-label">Key details</span>
+                                    <hr>
+                                    <div id="panel-key" class="grid-x">
+                                        <div class="medium-6 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Gender:</span><br/><span class="panel-info">Male</span>
+                                            </div>
+                                        </div>
+                                        <div class="medium-6 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">NHS Number:</span><br/><span class="panel-info">123 454 545</span>
+                                            </div>
+                                        </div>
+                                        <div class="medium-6 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Date of birth:</span><br/><span class="panel-info">17-Apr-1969</span>
+                                            </div>
+                                        </div>
+                                        <div class="medium-6 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Place of birth:</span><br/><span class="panel-info">Stratford-Upon-Avon</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+                        </div>
+
+                        <div class="large-6 medium-12 cell medium-order-2">
+
+                            <fieldset class="fieldset">
+                                <!--  <legend>Name</legend> -->
+                                <span class="panel-main-label">Addresses</span>
+                                <hr>
+                                <div id="panel-address" class="grid-x">
+                                    <div class="medium-6 small-12 large-6 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Usual address:</span><br/><span class="panel-info">1 Henley Street<br/>Stratford-upon-Avon<br/>Warwickshire<br/>AB12 3DE</span>
+                                        </div>
+                                    </div>
+                                    <div class="medium-6 small-12 large-6 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Temporary address:</span><br/>
+                                            <span class="panel-info">101 Other Street<br/>Stratford-upon-Avon<br/>Warwickshire<br/>AB12 3DE</span><br/>
+                                            <span class="panel-info-note">Effective: 01-Aug-2017 - 01-Sep-2017</span><br/>
+                                        </div>
+                                    </div>
+                                    <div class="medium-12 small-12 large-12 cell">
+
+                                        <a class="button hollow primary small" style="margin-bottom: 0; float: right;">View address history</a>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--       <section id="second" class="info-section" data-magellan-target="second">
+                    <br/>
+                    <h4>GP &amp; care providers</h4>
+
+                    <div class="grid-x grid-margin-x">
+
+                        <div class="large-6 medium-12 cell">
+
+                            <fieldset class="fieldset">
+                                <legend>General Practice</legend>
+                                <div id="panel-gp" class="grid-x">
+                                    <div class="large-6 medium-6 cell">
+                                        <div class="medium-12 small-12 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Name:</span><br/><span class="panel-info">Dr. Doolittle</span><br/>
+                                            </div>
+                                        </div>
+
+                                        <div class="medium-12 small-12 large-6 cell">
+                                            <div class="panel-info-group cell">
+                                                <span class="panel-label">Address:</span><br/><span class="panel-info">1 The Surgery<br/>High Street<br/>Stratford-upon-Avon<br/>Warwickshire<br/>AB12 7DE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="large-6 medium-6 cell">
+                                        <div class="grid-x">
+                                            <div class="medium-12 small-12 large-12 cell">
+                                                <div class="panel-info-group cell">
+                                                    <span class="panel-label">Telephone:</span><br/><span class="panel-info">01234 567 890</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="medium-12 small-12 large-12 cell">
+                                                <div class="panel-info-group cell">
+                                                    <span class="panel-label">Commissioning orginisation:</span><br/><span class="panel-info"><a href="#">5AN</a>                                                                                                           </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="medium-12 small-12 large-12 cell">
+                                                <div class="panel-info-group cell">
+                                                    <span class="panel-label">High-level health Geography:</span><br/><span class="panel-info"><a href="#">Q11</a>                                                                                                           </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="large-6 medium-12 cell">
+
+                            <fieldset class="fieldset">
+                                <legend>GPs registered at this practice</legend>
+                                <div id="panel-gpreg" class="grid-x">
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Name:</span><br/><span class="panel-info"><a href="#">Dr. Livingstone</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">GP Code:</span><br/><span class="panel-info">G1979031</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">GMC Code:</span><br/><span class="panel-info">1979031</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cell">
+                                        <hr>
+                                    </div>
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Name:</span><br/><span class="panel-info"><a href="#">Dr. No</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">GP Code:</span><br/><span class="panel-info">G1979032</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="large-4 medium-4 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">GMC Code:</span><br/><span class="panel-info">1979032</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="large-6 medium-6 cell">
+
+                            <fieldset class="fieldset">
+                                <legend>Nominated pharmacy</legend>
+                                <div id="panel-key" class="cell">
+                                    <div class="panel-info-group cell">
+                                        <span class="panel-info">No nominated pharmacy</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section id="third" class="info-section" data-magellan-target="third">
+                    <br/>
+                    <h4>Contacts &amp; next of kin</h4>
+
+                    <div class="grid-x grid-margin-x">
+                        <div class="large-6 medium-12 cell">
+
+                            <fieldset class="fieldset">
+                                <legend>1. Anne Hathaway</legend>
+                                <div id="panel-kin" class="grid-x">
+
+                                    <div class="small-12 medium-6 large-12 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Relationship:</span><br/><span class="panel-info">Spouse</span><br/>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 medium-6  large-12 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Address:</span><br/><span class="panel-info">1 Henley Street<br/>Stratford-upon-Avon<br/>Warwickshire<br/>AB12 3DE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 medium-6 large-12 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Telephone:</span><br/><span class="panel-info">01234 567 888</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 medium-6 large-12 cell">
+                                        <div class="panel-info-group cell">
+                                            <span class="panel-label">Email:</span><br/><span class="panel-info-none">Not recorded                                                                                                           </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 medium-12 large-12 cell">
+
+                                        <a class="button hollow primary small" style="margin-bottom: 0; float: right;">Remove</a>
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                        </div>
+                    </div>
+
+                </section> -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer" class="grid-container">
+        <div class="grid-x grid-padding-x grid-margin-x">
+            <div class="cell">
+                <strong>CONFIDENTIAL:</strong> PERSONAL PATIENT DATA acccessed by Inspector Clouseau - KIRKBY MANOR NH (8A819)
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vendor/top.js"></script>
+</body>
+
+</html>
