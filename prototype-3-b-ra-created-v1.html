@@ -268,21 +268,132 @@
 
     </div>
 
+    <div class="reveal large" id="exampleModal1" data-reveal>
+        <br/>
+        <h3>Add a Reasonable Adjustment </h3><br/>
+        <p> <strong>1.</strong> Choose <span style="text-decoration: underline;">one</span> of the following of categories of reasonable adjustment:</p>
 
+        <div class="grid-x">
 
+        </div>
 
+        <br/>
 
+        <a class="button primary" href="#" data-open="exampleModal2">Next</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
 
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
 
+    <div class="reveal large" id="exampleModal2" data-reveal>
+        <br/>
+        <h3>Add a Reasonable Adjustment</h3><br/>
 
+        <div class="grid-x">
+            <div class="cell">
+                <p>Add supporting detail for the <strong>[reasonable adjustment name]</strong> reasonable adjustment:</p>
+            </div>
+            <div class="medium-8 cell">
+                <textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea>
+            </div>
+        </div>
 
+        <a class="button primary" data-open="ra-add-confirm">Next</a> &nbsp;
+        <a class="button ghost" href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large ra-added" id="ra-add-confirm" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3>Please confirm you wish to add this reasonable adjustment</h3><br/>
+                <p>Any information entered will be shared nationally
+                </p>
+            </div>
+        </div>
+
+        <a class="button primary" href="prototype-3-b-ra-created-ra-added.html">Yes, I wish to add this reasonable adjustment</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Close</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large ra-added" id="exampleModal3" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3><i class="fi-check"></i> Reasonable adjustment successfully added</h3><br/>
+                <p>Add supporting detail for the reasonable adjustment:</p>
+            </div>
+        </div>
+
+        <a class="button ghost" href="#" data-close>Close</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="exampleModal4" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3 style="color: #009C9C !important;"><i class="fi-flag"></i> Reasonable adjustment flag successfully created</h3>
+                <p>Now you can add specific reasonable adjustments (PLACEHOLDER COPY)</p>
+                <a class="button primary" data-open="exampleModal1">Add a reasonable adjustment now</a> &nbsp; <a class="button ghost" href="#" data-close>I will add later</a>
+            </div>
+        </div>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/vendor/top.js"></script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
+        });
+        //# sourceURL=pen.js
 
+    </script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason2").toggleClass("hide", this.value !== "Purple");
+        });
+        //# sourceURL=pen.js
+
+    </script>
+    <script>
+        jQuery("input[name=pokemon]").click(function() {
+            jQuery("#reason-communication").toggleClass("hide", this.value !== "communication");
+        });
+        //# sourceURL=pen.js
+
+    </script>
+    <script>
+        $(document).foundation();
+        $(document).ready(function() {
+            $('#exampleModal4').foundation('open')
+        });
+
+    </script>
 </body>
 
 </html>

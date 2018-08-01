@@ -551,7 +551,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
-h5, .h5,
+h5, .h5, .main-label,
 h6, .h6 {
   font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
   font-style: normal;
@@ -591,7 +591,7 @@ h4, .h4 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-h5, .h5 {
+h5, .h5, .main-label {
   font-size: 1.0625rem;
   line-height: 1.4;
   margin-top: 0;
@@ -612,7 +612,7 @@ h6, .h6 {
     font-size: 1.9375rem; }
   h4, .h4 {
     font-size: 1.5625rem; }
-  h5, .h5 {
+  h5, .h5, .main-label {
     font-size: 1.25rem; }
   h6, .h6 {
     font-size: 1rem; } }
@@ -629,7 +629,7 @@ a {
 
 hr {
   clear: both;
-  max-width: 62.5rem;
+  /*max-width: 62.5rem;*/
   height: 0;
   margin: 1.25rem auto;
   border-top: 0;
@@ -929,10 +929,10 @@ label {
   margin-bottom: 1rem;
   -ms-flex-align: stretch;
       align-items: stretch; }
-  .input-group > :first-child {
+  /*.input-group > :first-child {
     border-radius: 5px 0 0 5px; }
   .input-group > :last-child > * {
-    border-radius: 0 5px 5px 0; }
+    border-radius: 0 5px 5px 0; }*/
 
 .input-group-label, .input-group-field, .input-group-button, .input-group-button a,
 .input-group-button input,
@@ -964,7 +964,8 @@ label {
   -ms-flex: 1 1 0px;
       flex: 1 1 0px;
   height: auto;
-  min-width: 0; }
+  min-width: 0;
+margin-right: 10px;}
 
 .input-group-button {
   padding-top: 0;
@@ -998,7 +999,7 @@ legend {
 .fieldset {
   margin: 1.125rem 0;
   padding: 1.25rem;
-  border: 1px solid #cacaca; 
+  border: 1px solid #cacaca;
 border-radius: 5px;}
   .fieldset legend {
     margin: 0;
@@ -2478,7 +2479,7 @@ width: 100%;}
       align-items: center;
   padding: 0.5rem;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; 
+      flex-wrap: wrap;
         width: 100%;}
   .top-bar,
   .top-bar ul {
