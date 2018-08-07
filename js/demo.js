@@ -164,7 +164,7 @@ var reqenviron  = [
         minChars: 1,
 
         showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Sorry, no matching results. Keep typing to add a generic Reasonable Adjustment',
+        noSuggestionNotice: 'Sorry, no matching results. Keep typing to add a Bespoke Reasonable Adjustment',
         groupBy: 'category'
     });
 
