@@ -15,9 +15,39 @@
 </head>
 
 <style>
-    .ra-added {
-        background: #009C9C !important;
+    .success {
         color: white !important;
+    }
+
+    .toggle-bg {
+        background: #ececec;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-panel {
+        margin-bottom: 0px;
+    }
+
+    .tabs-panel.is-active {
+        background: transparent;
+        color: #415564;
+        border-radius: 0px;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    .tabs-content {
+        border: 0px;
+    }
+
+    .tabs-title>a:hover {
+        background: #e6e6e6;
+    }
+
+    .tabs-title>a:focus,
+    .tabs-title>a[aria-selected='true'] {
+        background: #005EB8;
+        color: white;
     }
 
 </style>
@@ -93,74 +123,17 @@
             </div>
         </div>
     </div>
-
     <div id="content-wrapper" class="grid-container">
         <div class="grid-x">
 
             <div id="in-page-content" class="cell">
 
                 <div class="grid-x grid-padding-x">
-                    <div class="cell"><br/>
-                        <div class="callout alert">
-                            <h4><i class="fi-alert"></i>&nbsp;Please consider reasonable adjustments for this patient</h4>
-                            <p>The Equality Act (2010) states the NHS and other public organisations have a duty to provide equal access to all services. This is called making reasonable adjustments. For example, providing wheelchair access. The Reasonable Adjustment Flag provides details of the reasonable adjustments that should be considered when providing care for a patient
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <div class="cell">
+                      <br/>
+                      <h3 style="color: #009C9C !important;">Confirm your selected Reasonable Adjustments.</h3>
+                      <p>Please confirm your selected Reasonable Adjustments before you add these. You can edit or delete these if you require.</p>
 
-                <div class="grid-x grid-padding-x">
-                    <div class="large-12 medium-12 cell">
-                        <fieldset class="fieldset">
-                            <!--   <legend>Patient impairment(s) to consider when making adjustments:</legend> -->
-                            <span class="panel-main-label">Patient impairment(s) to consider when making adjustments:</span>
-                            <hr>
-                            <div id="panel-key" class="grid-x">
-                                <div class="medium-12 large-12 cell">
-                                    <div class="panel-info-group cell">
-                                        <table width="100%" class="hover stack">
-                                            <thead>
-                                                <tr>
-                                                    <th width="20%;">Patient impairment</th>
-                                                    <th width="40%;">Additional detail</th>
-                                                    <th>Added</th>
-                                                    <th>...</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-ra">Learning Disability</td>
-                                                    <td class="table-detail">William as a severe learning disability</td>
-                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
-                                                    </td>
-                                                    <td class="table-cta">
-                                                        <div class="medium-12 small-12 large-12 cell">
-
-                                                            <a class="button hollow alert small expanded">Delete</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="table-ra">Sensory Disability</td>
-                                                    <td class="table-detail">William has a severe visual impairment
-                                                    </td>
-                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
-                                                    </td>
-                                                    <td class="table-cta">
-                                                        <div class="medium-12 small-12 large-12 cell">
-                                                            <a class="button hollow alert small expanded">Delete</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="medium-12 small-12 large-12 cell">
-                                        <a class="button primary" style="margin-bottom: 0; float: right; margin-right: 10px;">Add patient impairment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
                     </div>
                 </div>
 
@@ -193,7 +166,9 @@
                                                         <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
                                                         </td>
                                                         <td class="table-cta">
-
+                                                            <div class="medium-12 small-12 large-12 cell">
+                                                                <a class="button hollow primary small expanded">Edit</a>
+                                                            </div>
                                                             <div class="medium-12 small-12 large-12 cell">
 
                                                                 <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
@@ -209,7 +184,9 @@
                                                         <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
                                                         </td>
                                                         <td class="table-cta">
-
+                                                            <div class="medium-12 small-12 large-12 cell">
+                                                                <a class="button hollow primary small expanded">Edit</a>
+                                                            </div>
                                                             <div class="medium-12 small-12 large-12 cell">
 
                                                                 <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
@@ -217,14 +194,16 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="table-ra">A carer needs to be present at all health appointments</td>
-                                                        <td class="table-detail">William requires a carer to be present at all health appointments. The Carer number is 07912345678.
+                                                        <td class="table-ra">Carer needs to be present at all health appointments </td>
+                                                        <td class="table-detail">William requires a carer to be present at all health appointments. Their contact details are 07121722022.
                                                         </td>
                                                         <td class="table-category">Bespoke</td>
                                                         <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
                                                         </td>
                                                         <td class="table-cta">
-
+                                                            <div class="medium-12 small-12 large-12 cell">
+                                                                <a class="button hollow primary small expanded">Edit</a>
+                                                            </div>
                                                             <div class="medium-12 small-12 large-12 cell">
 
                                                                 <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
@@ -234,7 +213,7 @@
 
                                                 </tbody>
                                             </table>
-                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra.html">Add Reasonable Adjustments</a>
+                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra.html">Add More Reasonable Adjustments</a>
                                         </div>
                                     </div>
                                 </div>
@@ -242,45 +221,23 @@
                         </fieldset>
                     </div>
                 </div>
+                <br>
+                <h5>Confirmation required</h5>
+                <p>By continuing, you are confirming that you wish to add the Reasonable Adjustments(s) to this flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
 
-                <div class="grid-x grid-padding-x">
-                    <div class="large-6 medium-12 cell">
-                        <fieldset class="fieldset">
-                            <span class="panel-main-label">Consent provided by:</span>
-                            <hr>
-                            <div id="panel-key" class="grid-x">
-                                <div class="medium-12 large-12 cell">
-                                    <div class="panel-info-group cell">
-                                        <p><strong>Reasonable Adjustment flag was created in the patient's best interest.</strong></p>
-                                        <p>This is the free text summary element of the patient's best interest. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum cursus ipsum et auctor. Integer pretium, purus vitae hendrerit commodo, magna risus feugiat dui, at vestibulum nulla ligula eu diam. </p>
-                                    </div>
-                                </div>
-                                <div class="medium-12 small-12 large-12 cell">
-                                    <a class="button hollow primary" style="margin-bottom: 0; float: right; margin-right: 0px;">Edit consent</a>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="large-6 medium-6 cell">
-                        <fieldset class="fieldset">
-                            <span class="panel-main-label">Flag last updated:</span>
-                            <hr>
-                            <div id="panel-key" class="grid-x">
-                                <div class="medium-12 large-12 cell">
-                                    <div class="panel-info-group cell">
-                                        <p><strong>16-May-2017 at 11:03 AM</strong><br/><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/><br/>Tel: 0191 121121<br/>Email: <a href="#">email@address.com</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
+                <hr>
 
-                <div class="grid-x grid-padding-x">
-                    <div class="large-12 medium-12 cell" style="text-align: center; margin: 20px 0px 20px 0px;">
-                        <a class="button alert large" href="#">Remove Reasonable Adjustment flag</a>
-                    </div>
-                </div>
+                <a href="prototype-3-b-ra-added-confirmed.html" class="button primary">Yes, I wish to add</a> &nbsp;
+                <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
+
+<a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
+
+                <br><br><br><br><br>
+            </div>
+        </div>
+
+
+
 
         <div id="footer" class="grid-container">
             <div class="grid-x grid-padding-x grid-margin-x">
@@ -292,86 +249,16 @@
 
     </div>
 
-    <div class="reveal large" id="exampleModal1" data-reveal>
-        <br/>
-        <h3>Add a Reasonable Adjustment </h3><br/>
-
-        <div class="large-6 medium-6 cell">
-            <form>
-                <h6>Category of reasonable adjustment</h6>
-                <select style="width: 75%;">
-                <option value="husker">Choose a category of reasonable adjustment</option>
-                <option value="starbuck">Adjustment to support patient communication including the Accessibility Standard</option>
-                <option value="hotdog">Adjustment to provide additional patient support</option>
-                <option value="apollo">Adjustment for personalisation of patient support</option>
-                <option value="apollo2">Adjustment to the patient's environment</option>
-                <option value="apollo3">Adjustment to the delivery of service for the patient</option>
-                <option value="apollo4">Adjustment for specific risks</option>
-                <option value="apollo5">Other type of reasonable adjustment</option>
-                </select>
-                <h6>Reasonable adjustment</h6>
-                <select style="width: 75%;">
-                <option value="husker">Choose a reasonable adjustment</option>
-                <option value="starbuck">Conditional list based on category selection</option>
-                </select>
-                <h6>Supporting detail</h6>
-                <textarea placeholder="If needed, please provide more details of the reasonable adjustment"></textarea>
-            </form>
-        </div>
-        <br/>
-
-        <a class="button primary" href="prototype-3-ra-created-ra-added-2.html">Add reasonable adjustment</a> &nbsp;
-        <a class="button ghost" href="#" data-close>Cancel</a>
-
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
 
 
 
-    <div class="reveal large" id="confirm-delete-ra" data-reveal>
-
-        <div class="grid-x">
-            <div class="cell">
-                <br/>
-                <h3>Please confirm you wish to remove this Reasonable adjustment</h3><br/>
-            </div>
-        </div>
-
-        <a class="button primary" href="prototype-3-b-ra-removed.html">Yes, I wish to remove this reasonable adjustment</a> &nbsp;
-
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/vendor/top.js"></script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
-        });
-        //# sourceURL=pen.js
 
-    </script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason2").toggleClass("hide", this.value !== "Purple");
-        });
-        //# sourceURL=pen.js
-
-    </script>
-    <script>
-        $(document).foundation();
-        $(document).ready(function() {
-            $('#exampleModal3').foundation('open')
-        });
-
-    </script>
 </body>
 
 </html>

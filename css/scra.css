@@ -256,7 +256,7 @@ input[name="country"] {
 }
 
 .is-active {
-    background: #005EB8;
+    background: #F2F2F2;
     color: white;
     border-radius: 5px;
 }
@@ -265,18 +265,33 @@ a.is-active:hover {
     color: white !important;
 }
 
-li.accordion-item.is-active {
+/*li.accordion-item.is-active {
     background: #005EB8;
 }
 
 .accordion-content {
     background: #eee;
     color: #415564;
-}
+}*/
 
 .accordion-title {
-    color: white;
-    background: #768692;
+    color: #2273C1;
+}
+
+.ra-categories-list {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+ul.ra-categories-list{
+  list-style: none;
+  padding-left: 0;}
+
+#commsupport-list {
+    display: none;
 }
 
 #patient-summary {

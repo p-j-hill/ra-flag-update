@@ -94,46 +94,77 @@
                 <div class="grid-x grid-padding-x">
                     <div class="cell">
                       <br/>
-                      <h3>Create a Reasonable Adjustment flag: Record Consent</h3><br/>
-                      <h4>Step 1 of 2</h4><br/>
+                      <h3>Create a Reasonable Adjustment flag: Impairment</h3><br/>
+                      <h4>Step 2 of 2</h4><br/>
 
-                      <h5>How has consent been obtained in order to create this Reasonable Adjustment flag?</h5>
+                      <h5>Please select the impairments that should be considered when making reasonable adjustments.<br/>
+(You can select more than one)</h5>
                       <br/>
+
+                      <p>The purpose of recording and sharing patient impairments is to help healthcare professionals understand and perform the associated adjustments required for each patient. This is not a list of all the patient’s medical information.</p>
+
                       <form>
                           <div class="large-6 cell">
-                              <input type="radio" name="pokemon" value="Red" id="pokemonRed" required onClick="ckChange(this)"><label for="pokemonRed">The patient</label><br/>
-                              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="best-interest" class="trigger"><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
-                              <div id="best-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <input type="checkbox" name="pokemon" value="learning" id="learning" data-trigger="reason-learning" class="trigger"><label class="moredetail" for="learning">Learning disability(s)</label><br/>
+                              <div id="reason-learning"  class="large-6 medium-6 cell hidden">
                                   <label>Please provide more detail
                                   <input type="text" name="flavor">
                               </label>
                               </div>
-                              <br/>
-                              <input type="radio" name="pokemon" value="Red" id="w" required onClick="ckChange(this)"><label for="w">Lasting power of attorney personal welfare</label>
-                              <br/>
-                              <input type="radio" name="pokemon" value="Red" id="e" required onClick="ckChange(this)"><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
-                              <br/>
-
-                              <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
-                              <div id="reason" class="large-6 medium-6 cell hide">
-                                  <label>Details of best interest
+                              <input type="checkbox" name="pokemon" value="Autism" id="Autism" data-trigger="reason-autism" class="trigger"><label class="moredetail" for="Autism">Autism</label><br/>
+                              <div id="reason-autism" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
                                   <input type="text" name="flavor">
                               </label>
-                              </div> -->
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Sensory" id="Sensory" data-trigger="reason-sensory" class="trigger"><label class="moredetail" for="Sensory">Sensory disability(s) - such as sight, hearing or verbal</label><br/>
+                              <div id="reason-sensory" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Physical" id="Physical" data-trigger="reason-physical" class="trigger"><label class="moredetail" for="Physical">Physical disability(s)</label><br/>
+                              <div id="reason-physical" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Mental" id="Mental" data-trigger="reason-mental" class="trigger"><label class="moredetail" for="Mental">Mental health condition</label><br/>
+                              <div id="reason-mental" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Long" id="Long" data-trigger="reason-long" class="trigger"><label class="moredetail" for="Long">Long-term condition(s) - such as HIV, Dementia, Cancer or Multiple Scleroris</label><br/>
+                              <div id="reason-long" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other" class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
+                              <div id="reason-other" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <input type="checkbox" name="pokemon" value="Red" id="pokemonRed" onClick="ckChange(this)"><label for="pokemonRed">Patient would prefer not to say</label><br/>
                           </div>
                       </form>
+                      <br>
+                      <h5>Confirmation required</h5>
+                      <p>By continuing, you are confirming that you wish to add the patient impairment(s) to this Reasonable Adjustment flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
 
 
                     </div>
                 </div>
+                  <hr width="98%" >
 
-                  <hr width="98%">
-                  <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">
+                <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">
+                  <a class="button primary" href="prototype-3-b-ra-confirmed-v2.html">Yes, I wish to add</a> &nbsp;
+                  <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
+                  <a class="button ghost" href="prototype-3-ra.html">Cancel</a>
 
-                  <a class="button primary" href="prototype-3-ra-impairment.html">Next</a> &nbsp;
-                  <a class="button ghost" href="javascript: history.go(-1)">Cancel</a>
 
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
                 <span aria-hidden="true">&times;</span>
                 </button>
                 </div>
@@ -246,7 +277,7 @@
                     <input type="text" name="flavor">
                 </label>
                 </div>
-                <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other" class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
+                <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other"   class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
                 <div id="reason-other" name="reasondetail" class="large-6 medium-6 cell hidden">
                     <label>Please provide more detail
                     <input type="text" name="flavor">
@@ -346,8 +377,20 @@ $(function() {
     <script>
     // toggle disabling all check boxes
     function ckChange(el) {
-      
+      var ckName = document.getElementsByName(el.name);
+      for (var i = 0, c; c = ckName[i]; i++) {
+       c.disabled = !(!el.checked || c === el);
+      }
+
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
       $('.hidden').hide();
+      $('input.trigger').not(this).prop('checked', false);
 
   }
 

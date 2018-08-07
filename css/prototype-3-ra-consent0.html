@@ -101,19 +101,17 @@
                       <br/>
                       <form>
                           <div class="large-6 cell">
-                              <input type="radio" name="pokemon" value="Red" id="pokemonRed" required onClick="ckChange(this)"><label for="pokemonRed">The patient</label><br/>
-                              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="best-interest" class="trigger"><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
-                              <div id="best-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
+                              <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">The patient</label><br/>
+                              <input type="radio" name="pokemon" value="Red" id="q" required><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
                               <br/>
-                              <input type="radio" name="pokemon" value="Red" id="w" required onClick="ckChange(this)"><label for="w">Lasting power of attorney personal welfare</label>
+                              <input type="radio" name="pokemon" value="Red" id="w" required><label for="w">Lasting power of attorney personal welfare</label>
                               <br/>
-                              <input type="radio" name="pokemon" value="Red" id="e" required onClick="ckChange(this)"><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
+                              <input type="radio" name="pokemon" value="Red" id="e" required><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
                               <br/>
-
+                              <input type="radio" name="pokemon" value="Red" id="r" required><label for="r">Independent mental capacity advocate instructed</label>
+                              <br/>
+                              <input type="radio" name="pokemon" value="Red" id="t" required><label for="t">Acting as an advocate for the client (for any other advocate)</label>
+                              <br/>
                               <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
                               <div id="reason" class="large-6 medium-6 cell hide">
                                   <label>Details of best interest
@@ -346,8 +344,20 @@ $(function() {
     <script>
     // toggle disabling all check boxes
     function ckChange(el) {
-      
+      var ckName = document.getElementsByName(el.name);
+      for (var i = 0, c; c = ckName[i]; i++) {
+       c.disabled = !(!el.checked || c === el);
+      }
+
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
+      $('.moredetail').toggleClass('add-grey-color');
       $('.hidden').hide();
+      $('input.trigger').not(this).prop('checked', false);
 
   }
 

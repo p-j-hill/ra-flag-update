@@ -126,6 +126,15 @@ var reqinform  = [
 'Requires written information in at least 28 point sans serif font'
 ];
 
+var reqenviron  = [
+'Requires adjustment to provide low noise stimulus',
+'Requires adjustment to provide single room',
+'Requires adjustment to provide wheelchair access',
+'Requires adjustment to accommodate specialist equipment',
+'Requires adjustment to provide low light stimulus',
+'Requires adjustment to minimise waiting times'
+];
+
   /* Categories
 
   Communicating with patients: including provision of Accessible Information –communication support
@@ -145,8 +154,9 @@ var reqinform  = [
     var cat2 = $.map(reqcomms, function (ras) { return { value: ras, data: { category: 'Requires communication professional' }}; });
     var cat3 = $.map(reqspec, function (ras) { return { value: ras, data: { category: 'Requires specific contact method' }}; });
     var cat4 = $.map(reqinform, function (ras) { return { value: ras, data: { category: 'Requires specific information format' }}; });
+    var cat5 = $.map(reqenviron, function (ras) { return { value: ras, data: { category: 'Requires adjustments to the environment' }}; });
 
-    var rasflags = cat1.concat(cat2).concat(cat3).concat(cat4);
+    var rasflags = cat1.concat(cat2).concat(cat3).concat(cat4).concat(cat5);
 
     // Initialize autocomplete with local lookup:
     $('#autocomplete').devbridgeAutocomplete({
