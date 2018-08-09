@@ -97,10 +97,9 @@
                     <div class="cell">
 
                       <br/>
-                      <h3 style="display:inline-block;">Add Reasonable Adjustments</h3>
-                      <button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>
+                      <h3 style="display:inline-block;">Create a Reasonable Adjustment flag: Add Reasonable Adjustments</h3>
 
-                      <h4>Step 1 of 2</h4><br/>
+                      <h4>Step 2 of 3</h4><br/>
                       <div class="callout primary">
                           <h4>Tips for adding Reasonable Adjustments</h4>
                           <ul>
@@ -165,7 +164,7 @@
                                       </label><br/>
                                                                   <input type="checkbox" name="pokemon" value="1" id="pokemon5" required><label for="pokemon5">Requires adjustment to provide low light stimulus
                                       </label><br/>
-                                                                  <input type="checkbox" class="checked-ra" name="pokemon" value="1" id="pokemon6" required><label for="pokemon6">Requires adjustment to minimise waiting times
+                                                                  <input type="checkbox" class="checked-ra" name="pokemon" value="ra-sroll" id="pokemon6" required><label for="pokemon6">Requires adjustment to minimise waiting times
                                       </label><br/>
 
 </fieldset>
@@ -222,7 +221,8 @@
                   <hr width="98%" >
                   <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">
 
-                  <a class="button primary" href="prototype-3-b-ra-added-v2.html">Next</a> &nbsp;
+                  <a class="button primary" href="prototype-3-b-ra-added-v2-flip.html">Next</a> &nbsp;
+                  <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
                   <a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
 
 
@@ -364,7 +364,9 @@ var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').htm
           if($(this).is(":checked")) {
                 $("div.ra-no-content").hide();
                 $("#ra-container3a").show();
-
+                $('html, body').animate({
+                           scrollTop: $("#panel-key").offset().top
+                       }, 500);
 
           } else {
               $("#ra-container3a").hide();

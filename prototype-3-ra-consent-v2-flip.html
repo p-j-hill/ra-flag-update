@@ -1,0 +1,361 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>RA Flag - UJ3</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/scra.css">
+    <link rel="stylesheet" href="css/foundation-icons.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+
+    <a href="#" class="scrollToTop">Top</a>
+
+    <div id="masthead-2" class="grid-container full">
+        <div id="masthead-menu" class="grid-container">
+            <div class="grid-x grid-padding-x grid-margin-x">
+                <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+                    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+                    <div class="title-bar-title">
+                        <a href="index.html"><img src="/img/nhs-digital-logo-left.jpg" style="height: 20px;"> </a>&nbsp; SRCa
+                    </div>
+                    <a href="prototype-b.html" class="button hollow small" style="position: absolute; float: right; right: 10px;">Find patient</a>
+                </div>
+
+                <div class="top-bar" id="responsive-menu">
+                    <div class="top-bar-left">
+                        <ul class="dropdown menu show-for-large">
+                            <li><a href="index.html" style="padding: 0px;"><img src="/img/nhs-digital-logo-left.jpg" style="height: 40px;"></a></li>
+                            <li class="menu-text">Summary Care Record Application</li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="#0">Change role</a></li>
+                            <li><a href="#0">Help</a></li>
+                            <li><a href="#0">Exit</a></li>
+                            <li><button class="button hollow show-for-medium">Find patient</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div id="patient-summary" class="grid-x grid-padding-x">
+            <div id="summary-name" class="small-6 medium-shrink cell small-order-1 summary-panel">
+                <span class="summary-label">Full name:</span><br/><span class="summary-info">William Shakespeare</span>
+            </div>
+            <div id="summary-gender" class="small-6 medium-shrink cell small-order-3 summary-panel">
+                <span class="summary-label">Gender:</span><br/><span class="summary-info">Male</span>
+            </div>
+            <div id="summary-dob" class="small-6 medium-shrink cell small-order-4 summary-panel">
+                <span class="summary-label">DOB:</span><br/><span class="summary-info">17-Apr-1969</span>
+            </div>
+            <div id="summary-nhs" class="small-6 medium-shrink cell small-order-5 summary-panel">
+                <span class="summary-label">NHS No:</span><br/><span class="summary-info">123 45 45 45</span>
+            </div>
+            <div id="summary-address" class="medium-auto small-12 cell small-order-6 medium-order-6 summary-panel">
+                <span class="summary-label">Address:</span><br/><span class="summary-info">1 Henley Street, Stratford-upon-Avon, Warwickshire</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-wrapper" class="grid-container">
+        <div id="tabbies" class="grid-x" data-equalizer>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="prototype-3-patient-details.html" class="button tabby tabby-inactive" data-equalizer-watch>Patient details</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Chargeable status</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments</a>
+            </div>
+            <div class="large-shrink medium-3 small-6 cell">
+                <a data-open="exampleModal1" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Summary Care Record </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-wrapper" class="grid-container">
+        <div class="grid-x">
+
+            <div id="in-page-content" class="cell">
+
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                      <br/>
+                      <h3>Create a Reasonable Adjustment flag: Record Consent</h3><br/>
+                      <h4>Step 1 of 3</h4><br/>
+
+                      <h5>How has consent been obtained in order to create this Reasonable Adjustment flag?</h5>
+                      <br/>
+                      <form>
+                          <div class="large-6 cell">
+                              <input type="radio" name="pokemon" value="Red" id="pokemonRed" required onClick="ckChange(this)"><label for="pokemonRed">The patient</label><br/>
+                              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="best-interest" class="trigger"><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
+                              <div id="best-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                  <label>Please provide more detail
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div>
+                              <br/>
+                              <input type="radio" name="pokemon" value="Red" id="w" required onClick="ckChange(this)"><label for="w">Lasting power of attorney personal welfare</label>
+                              <br/>
+                              <input type="radio" name="pokemon" value="Red" id="e" required onClick="ckChange(this)"><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
+                              <br/>
+
+                              <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
+                              <div id="reason" class="large-6 medium-6 cell hide">
+                                  <label>Details of best interest
+                                  <input type="text" name="flavor">
+                              </label>
+                              </div> -->
+                          </div>
+                      </form>
+
+
+                    </div>
+                </div>
+
+                  <hr width="98%">
+                  <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">
+
+                  <a class="button primary" href="prototype-3-ra-add-ra-v2-flip.html">Next</a> &nbsp;
+                  <a class="button ghost" href="javascript: history.go(-1)">Cancel</a>
+
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <br><br><br><br><br>
+            </div>
+        </div>
+
+        <div id="footer" class="grid-container">
+            <div class="grid-x grid-padding-x grid-margin-x">
+                <div class="cell">
+                    <strong>CONFIDENTIAL:</strong> PERSONAL PATIENT DATA acccessed by Inspector Clouseau - KIRKBY MANOR NH (8A819)
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="reveal large" id="exampleModal1" data-reveal>
+        <br/>
+        <h3>Create a Reasonable Adjustment flag - 1 of 2</h3><br/>
+        <h5>Who has provided their consent to create the patient's Reasonable Adjustment flag?</h5>
+        <br/>
+        <form>
+            <div class="large-6 cell">
+                <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">The patient</label><br/>
+                <input type="radio" name="pokemon" value="Red" id="q" required><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
+                <br/>
+                <input type="radio" name="pokemon" value="Red" id="w" required><label for="w">Lasting power of attorney personal welfare</label>
+                <br/>
+                <input type="radio" name="pokemon" value="Red" id="e" required><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
+                <br/>
+                <input type="radio" name="pokemon" value="Red" id="r" required><label for="r">Independent mental capacity advocate instructed</label>
+                <br/>
+                <input type="radio" name="pokemon" value="Red" id="t" required><label for="t">Acting as an advocate for the client (for any other advocate)</label>
+                <br/>
+                <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
+                <div id="reason" class="large-6 medium-6 cell hide">
+                    <label>Details of best interest
+                    <input type="text" name="flavor">
+                </label>
+                </div> -->
+            </div>
+        </form>
+        <br/>
+
+        <a class="button primary" href="#" data-open="exampleModal3">Next</a> &nbsp;
+        <a class="button ghost" href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <!-- <div class="reveal large" id="exampleModal2" data-reveal>
+        <br/>
+        <h3>Create a Reasonable Adjustment flag - 2 of 3</h3><br/>
+        <h5>Has consent been obtained to report on the detail of the patient's Reasonable Adjustment flag anonymously to help patient care?</h5><br/>
+        <form>
+            <div class="large-6 cell">
+                <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Yes</label><br/>
+                <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">No</label><br/>
+            </div>
+        </form><br/>
+        <a class="button primary" href="#" data-open="exampleModal3">Next</a> &nbsp;
+        <a class="button ghost " href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span>  </button>
+    </div> -->
+
+    <div class="reveal large" id="exampleModal3" data-reveal>
+        <br/>
+        <h3>Create a Reasonable Adjustment flag - 2 of 2</h3><br/>
+        <h5>What are the patients impairments to be considered when making adjustments?</h5><br/>
+        <form>
+            <div class="large-6 cell">
+                  <input type="checkbox" name="pokemon" value="learning" id="learning" data-trigger="reason-learning" class="trigger"><label class="moredetail" for="learning">Learning disability(s)</label><br/>
+                <div id="reason-learning"  class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Autism" id="Autism" data-trigger="reason-autism" class="trigger"><label class="moredetail" for="Autism">Autism</label><br/>
+                <div id="reason-autism" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Sensory" id="Sensory" data-trigger="reason-sensory" class="trigger"><label class="moredetail" for="Sensory">Sensory disability(s) - such as sight, hearing or verbal</label><br/>
+                <div id="reason-sensory" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Physical" id="Physical" data-trigger="reason-physical" class="trigger"><label class="moredetail" for="Physical">Physical disability(s)</label><br/>
+                <div id="reason-physical" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Mental" id="Mental" data-trigger="reason-mental" class="trigger"><label class="moredetail" for="Mental">Mental health condition</label><br/>
+                <div id="reason-mental" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Long" id="Long" data-trigger="reason-long" class="trigger"><label class="moredetail" for="Long">Long-term condition(s) - such as HIV, Dementia, Cancer or Multiple Scleroris</label><br/>
+                <div id="reason-long" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other" class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
+                <div id="reason-other" name="reasondetail" class="large-6 medium-6 cell hidden">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Red" id="pokemonRed" onClick="ckChange(this)"><label for="pokemonRed">Patient would prefer not to say</label><br/>
+            </div>
+        </form><br/>
+        <a class="button primary" data-open="flag-confirm">Next</a> &nbsp;
+        <a class="button ghost " href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <div class="reveal large" id="flag-confirm" data-reveal>
+        <br/>
+        <h3>Please confirm you wish to create a reasonable adjustment flag</h3><br/>
+        <p>Please be aware any information entered in the flag will be shared nationally</p><br/>
+        <a class="button primary" href="prototype-3-b-ra-created.html">Yes, I wish to create a Reasonable Adjustment flag</a> &nbsp;
+        <a class="button ghost " href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Cancel</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vendor/top.js"></script>
+
+    <script>
+    /**
+*	Multiple Hidden Areas in a Form.
+*
+*	Instructions:
+*
+* 1. Add the 'trigger' class to checkboxes that will act as a trigger to show/hide area.
+* 2. Create a wrapper <div> around the field(s) you want to hide and give this an ID (whatever you want) and the class 'hidden'.
+* 3. Moving back to the checkbox, add a data-trigger attribute and set its value to the ID of the wrapper div that contains the fields you want to hide.
+* e.g. <input type="checkbox" name="checkbox" id="checkbox" class="trigger" data-trigger="my_hidden_fields">
+*      <div id="my_hidden_fields" class="hidden">
+*        Name: <input type="text" name="name">
+*      </div>
+*
+* The code below will automatically setup event listeners for any checkboxes with the 'trigger' class.
+* All elements with the 'hidden' class will be hidden when the page loads.
+* When a checkbox is checked the code will take the value from the data-trigger attribute on the
+* checkbox and use this to select the wrapper <div> that needs to be shown/hidden.
+*/
+
+
+$(function() {
+
+  // Hide the hidden sections.
+  // Use JS to do this in case the user doesn't have JS
+  // enabled.
+  $('.hidden').hide();
+
+  // Setup an event listener for each trigger checkbox that
+  // fires when the state of the checkbox changes.
+  $('.trigger').change(function() {
+   	// Get the ID of the hidden area from the data-trigger
+    // attribute.
+    var hiddenId = $(this).attr("data-trigger");
+
+    // Check to see if the checkbox is checked.
+    // If it is, show the fields and populate the input.
+    // If not, hide the fields.
+    if ($(this).is(':checked')) {
+      // Show the hidden fields.
+      $("#" + hiddenId).show();
+    } else {
+      // Make sure that the hidden fields are indeed
+      // hidden.
+      $("#" + hiddenId).hide();
+
+      // You may also want to clear the value of the
+      // hidden fields here. Just in case somebody
+      // shows the fields, enters data to them and then
+      // unticks the checkbox.
+      //
+      // This would do the job:
+      //
+      // $("#hidden_field").val("");
+    }
+  });
+});
+    </script>
+
+
+    <script>
+    // toggle disabling all check boxes
+    function ckChange(el) {
+
+      $('.hidden').hide();
+
+  }
+
+
+        //# sourceURL=pen.js
+
+    </script>
+
+</body>
+
+</html>

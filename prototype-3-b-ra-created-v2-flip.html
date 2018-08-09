@@ -15,9 +15,39 @@
 </head>
 
 <style>
-    .ra-added {
-        background: #009C9C !important;
+    .success {
         color: white !important;
+    }
+
+    .toggle-bg {
+        background: #ececec;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-panel {
+        margin-bottom: 0px;
+    }
+
+    .tabs-panel.is-active {
+        background: transparent;
+        color: #415564;
+        border-radius: 0px;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    .tabs-content {
+        border: 0px;
+    }
+
+    .tabs-title>a:hover {
+        background: #e6e6e6;
+    }
+
+    .tabs-title>a:focus,
+    .tabs-title>a[aria-selected='true'] {
+        background: #005EB8;
+        color: white;
     }
 
 </style>
@@ -112,61 +142,6 @@
                 <div class="grid-x grid-padding-x">
                     <div class="large-12 medium-12 cell">
                         <fieldset class="fieldset">
-                            <!--   <legend>Patient impairment(s) to consider when making adjustments:</legend> -->
-                            <span class="panel-main-label">Patient impairment(s) to consider when making adjustments:</span>
-                            <hr>
-                            <div id="panel-key" class="grid-x">
-                                <div class="medium-12 large-12 cell">
-                                    <div class="panel-info-group cell">
-                                        <table width="100%" class="hover stack">
-                                            <thead>
-                                                <tr>
-                                                    <th width="20%;">Patient impairment</th>
-                                                    <th width="40%;">Additional detail</th>
-                                                    <th>Added</th>
-                                                    <th>...</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-ra">Learning Disability</td>
-                                                    <td class="table-detail">William as a severe learning disability</td>
-                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
-                                                    </td>
-                                                    <td class="table-cta">
-                                                        <div class="medium-12 small-12 large-12 cell">
-
-                                                            <a class="button hollow alert small expanded">Delete</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="table-ra">Sensory Disability</td>
-                                                    <td class="table-detail">William has a severe visual impairment
-                                                    </td>
-                                                    <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
-                                                    </td>
-                                                    <td class="table-cta">
-                                                        <div class="medium-12 small-12 large-12 cell">
-                                                            <a class="button hollow alert small expanded">Delete</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="medium-12 small-12 large-12 cell">
-                                        <a class="button primary" style="margin-bottom: 0; float: right; margin-right: 10px;">Add patient impairment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-
-                <div class="grid-x grid-padding-x">
-                    <div class="large-12 medium-12 cell">
-                        <fieldset class="fieldset">
                             <!--  <legend>Potential adjustments:</legend> -->
                             <span class="panel-main-label">Reasonable Adjustments:</span>
                             <hr>
@@ -220,7 +195,7 @@
 
                                               </tbody>
                                           </table>
-                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra-v2.html">Add Reasonable Adjustments</a>
+                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra-v2-flip.html">Add Reasonable Adjustments</a>
                                         </div>
                                     </div>
                                 </div>
@@ -228,6 +203,30 @@
                         </fieldset>
                     </div>
                 </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 medium-12 cell">
+                        <fieldset class="fieldset">
+                            <!--   <legend>Patient impairment(s) to consider when making adjustments:</legend> -->
+                            <span class="panel-main-label">Patient impairment(s) to consider when making adjustments:</span>
+                            <hr>
+                            <div id="panel-key" class="grid-x">
+                                <div class="medium-12 large-12 cell">
+                                    <div class="panel-info-group cell">
+                                        <div class="medium-12 small-12 large-12 cell">
+                                            <p>No patient impairments added yet</p>
+                                        </div>
+                                        <div class="medium-12 small-12 large-12 cell">
+                                            <a class="button primary" style="margin-bottom: 0; float: right;" data-open="exampleModal1">Add patient impairments</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+
 
                 <div class="grid-x grid-padding-x">
                     <div class="large-6 medium-12 cell">
@@ -268,6 +267,9 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
         <div id="footer" class="grid-container">
             <div class="grid-x grid-padding-x grid-margin-x">
                 <div class="cell">
@@ -278,86 +280,21 @@
 
     </div>
 
-    <div class="reveal large" id="exampleModal1" data-reveal>
-        <br/>
-        <h3>Add a Reasonable Adjustment </h3><br/>
-
-        <div class="large-6 medium-6 cell">
-            <form>
-                <h6>Category of reasonable adjustment</h6>
-                <select style="width: 75%;">
-                <option value="husker">Choose a category of reasonable adjustment</option>
-                <option value="starbuck">Adjustment to support patient communication including the Accessibility Standard</option>
-                <option value="hotdog">Adjustment to provide additional patient support</option>
-                <option value="apollo">Adjustment for personalisation of patient support</option>
-                <option value="apollo2">Adjustment to the patient's environment</option>
-                <option value="apollo3">Adjustment to the delivery of service for the patient</option>
-                <option value="apollo4">Adjustment for specific risks</option>
-                <option value="apollo5">Other type of reasonable adjustment</option>
-                </select>
-                <h6>Reasonable adjustment</h6>
-                <select style="width: 75%;">
-                <option value="husker">Choose a reasonable adjustment</option>
-                <option value="starbuck">Conditional list based on category selection</option>
-                </select>
-                <h6>Supporting detail</h6>
-                <textarea placeholder="If needed, please provide more details of the reasonable adjustment"></textarea>
-            </form>
-        </div>
-        <br/>
-
-        <a class="button primary" href="prototype-3-ra-created-ra-added-2.html">Add reasonable adjustment</a> &nbsp;
-        <a class="button ghost" href="#" data-close>Cancel</a>
-
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
 
 
 
-    <div class="reveal large" id="confirm-delete-ra" data-reveal>
 
-        <div class="grid-x">
-            <div class="cell">
-                <br/>
-                <h3>Please confirm you wish to remove this Reasonable adjustment</h3><br/>
-            </div>
-        </div>
 
-        <a class="button primary" href="prototype-3-b-ra-removed.html">Yes, I wish to remove this reasonable adjustment</a> &nbsp;
 
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
+
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/vendor/top.js"></script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
-        });
-        //# sourceURL=pen.js
 
-    </script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason2").toggleClass("hide", this.value !== "Purple");
-        });
-        //# sourceURL=pen.js
-
-    </script>
-    <script>
-        $(document).foundation();
-        $(document).ready(function() {
-            $('#exampleModal3').foundation('open')
-        });
-
-    </script>
 </body>
 
 </html>
