@@ -296,7 +296,7 @@ ul.ra-categories-list{
   list-style: none;
   padding-left: 0;}
 
-#commsupport-list {
+#commsupport-list, #contact-list, #enviro-list {
     display: none;
 }
 
