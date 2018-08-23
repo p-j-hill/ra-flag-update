@@ -78,7 +78,7 @@
                 <a href="#" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Chargeable status</a>
             </div>
             <div class="large-shrink medium-3 small-6 cell">
-                <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments</a>
+              <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments <span class="badge alert">&nbsp;</span></a>
             </div>
             <div class="large-shrink medium-3 small-6 cell">
                 <a data-open="exampleModal1" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Summary Care Record </a>
@@ -94,36 +94,44 @@
                 <div class="grid-x grid-padding-x">
 
 
-                    <div class="cell">
 
-                      <br/>
-                      <h3 style="display:inline-block;">Add Reasonable Adjustments</h3>
-                      <button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>
+                                      <div class="cell">
 
-                      <h4>Step 1 of 2</h4><br/>
-                      <div class="callout primary">
-                          <h4>Tips for adding Reasonable Adjustments</h4>
-                          <ul>
-                          <li>Browse the <b>cateogry list</b> to find the ones you want to add by checking the boxes.</li>
-                          <li>Or use the <b>input box</b> to type keywords. Suggestons will be shown as you type.</li>
-                          <li>Select the one that matches. Then press <b>Add</b>. </li>
-                        	<li>If <b>nothing matches</b>, or you wish to <b>create a bespoke adjustment</b>, continue typing remembering to press <b>Add</b> when you've finished.</li>
-                          <li>You can add <b>additional details</b> or <b>delete</b> Reasonable Adjustments witin the <b>Added Reasonable Adjustments</b> box.</li>
-                        	<li>When you have added all reasonable adjustments press <b>Next</b>.</li>
+                                        <br/>
+                                        <h3 style="display:inline-block;">Add Reasonable Adjustments</h3><br><br>
+                                        <!--<button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>-->
 
-                            </ul>
-                          </div>
+                                        <h4 class="step">Step 1 of 2 - Adding the adjustments</h4><br/>
+                                        <div class="callout primary">
+                                            <h4>How to add Reasonable Adjustments</h4>
+                                            <p style ="font-size:1em;">To add reasonable adjustments you can:
+                                            <ul>
+                                              <li>Browse the category list and tick the adjustments required</li>
+                                              <li>Type keywords or phrases into the input box to find the adjustments required</li>
+                                            <li>Use the input box to create a bespoke adjustment</li>
 
-                    </div>
-                </div>
+                                              </ul>
+                                              <p style ="font-size:1em;">When you have added all the required adjustments press <b>Next</b>.</p>
+
+                                            </div>
+
+                                      </div>
+                                  </div>
+                  <br>
 
                 <div class="grid-x grid-padding-x">
                     <div class="large-6 medium-12 cell">
+                    <!-- <label class="main-label">Select from Reasonable Adjustments categories</label>
+                      <ul><li>Browse the list of Reasonable Adjustment categories</li>
+                        <li>Tick the Reasonable Adjustments to add them.</li>
+
+</ul>-->
+
                                                       <ul class="accordion accroot" data-accordion="ulpyk2-accordion" data-allow-all-closed="true" data-multi-expand="true" role="tablist">
                                                         <li class="accordion-item" data-accordion-item="">
                                                             <!-- Accordion tab title -->
                                                             <a href="#/" class="accordion-title" aria-controls="fhkjja-accordion" role="tab" id="fhkjja-accordion-label" aria-expanded="false" aria-selected="false">
-                                                                <h6>Browse Reasonable Adjustment categories</h6>
+                                                                <h5>Select from Reasonable Adjustment categories</h5>
                                                             </a>
 
                                                             <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
@@ -140,15 +148,15 @@
 
                                                                   <div id="ra-categories-list">
 
-                                                                  <a href="#/" class="ra-reveal1">Communication support</a> (20)<br>
-                                                                  <a href="#">Requires communication professional</a> (25)<br>
-                                                                  <a href="#/" class="ra-reveal2">Requires specific contact method</a> (9)<br>
-                                                                  <a href="#">Requires specific information format</a> (11)<br>
-                                                                  <a href="#">Additional communications support</a> (18)<br>
-                                                                  <a href="#">Adjustments for providing Additional Support to patients</a> (9)<br>
-                                                                  <a href="#">Adjustments for Individual Care Requirements</a> (20)<br>
-                                                                  <a href="#/" class="ra-reveal3">Adjustments to the Environment</a> (6)<br>
-                                                                  <a href="#">Adjustments for Specific Clinical Risks</a> (18)
+                                                                  <a href="#/" class="ra-reveal1" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication support that is appropriate to this patient with their identified impairment">Communication support</a> (20)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires communication professional</a> (25)<br>
+                                                                  <a href="#/" class="ra-reveal2" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires specific contact method</a> (9)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires specific information format</a> (11)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Additional communications support</a> (18)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Adjustments for providing Additional Support to patients</a> (9)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Adjustments for Individual Care Requirements</a> (20)<br>
+                                                                  <a href="#/" class="ra-reveal3" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Adjustments to the Environment</a> (6)<br>
+                                                                  <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Adjustments for Specific Clinical Risks</a> (18)
 
 
                                                                 </div>
@@ -251,9 +259,11 @@
                                                         </ul>
 
                                         <br>
-                                        <label class="main-label">Search for or create bespoke Reasonable Adjustments</label>
-                                        <p>If you know the Reasonable Adjustment enter a keyword or phrase in the box. <br>To create your own bespoke Reasonable Adjustment enter it in the box.</p>
-
+                                      <label class="main-label">Enter or search for Reasonable Adjustments</label>
+                                        <ul><li>Start typing keywords until you find an adjustment to match.</li>
+                                          <li>If you cannot find a match, you can create a bespoke adjustment instead by continuing to type.</li>
+                                          <li>Remember to press <b>Add</b> when you're done.</li>
+                  </ul>
                                         <span class="form-hint">Example Reasonable Adjustment: Requires contact by telephone</span>
                                         <div class="input-group"><input class="input-group-field" name="country" id="autocomplete" type="text" placeholder="Enter Reasonable Adjustment or create your own" pattern="" required="">
                                             <div class="input-group-button">
@@ -343,11 +353,11 @@
 
 
     if (text == "Does lip read") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
       $("div.ra-no-content").hide();
       $('.show_hide').click(function(){
           $("#reason-details1").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Done' ? 'Add Details' : 'Done' );
       });
 
       $('.delete_ra').click(function(){
@@ -373,11 +383,11 @@
       });
 
       } else if (text == "Requires adjustment to minimise waiting times") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container3"><div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details3" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" id="ra-container3"><div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details3" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
       $("div.ra-no-content").hide();
       $('.show_hide').click(function(){
           $("#reason-details3").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Done' ? 'Add Details' : 'Done' );
       });
 
       $('.delete_ra').click(function(){

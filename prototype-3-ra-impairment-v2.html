@@ -91,72 +91,84 @@
 
             <div id="in-page-content" class="cell">
 
-                <div class="grid-x grid-padding-x">
-                    <div class="cell">
-                      <br/>
-                      <h3>Create a Reasonable Adjustment flag: Impairment</h3><br/>
-                      <h4>Step 2 of 2</h4><br/>
+              <div class="grid-x grid-padding-x">
+                  <div class="cell">
+                    <br/>
+                    <h3>Create a Reasonable Adjustment flag</h3><br/>
+                    <h4 class="step">Step 2 of 2 - Patient Impairments</h4><br/>
 
-                      <h5>Please select the impairments that should be considered when making reasonable adjustments.<br/>
-(You can select more than one)</h5>
-                      <br/>
+                    <div class="callout primary">
+                      <h4>Recording Impairments</h4>
 
-                      <p>The purpose of recording and sharing patient impairments is to help healthcare professionals understand and perform the associated adjustments required for each patient. This is not a list of all the patient’s medical information.</p>
 
-                      <form>
-                          <div class="large-6 cell">
-                                <input type="checkbox" name="pokemon" value="learning" id="learning" data-trigger="reason-learning" class="trigger"><label class="moredetail" for="learning">Learning disability(s)</label><br/>
-                              <div id="reason-learning"  class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Autism" id="Autism" data-trigger="reason-autism" class="trigger"><label class="moredetail" for="Autism">Autism</label><br/>
-                              <div id="reason-autism" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Sensory" id="Sensory" data-trigger="reason-sensory" class="trigger"><label class="moredetail" for="Sensory">Sensory disability(s) - such as sight, hearing or verbal</label><br/>
-                              <div id="reason-sensory" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Physical" id="Physical" data-trigger="reason-physical" class="trigger"><label class="moredetail" for="Physical">Physical disability(s)</label><br/>
-                              <div id="reason-physical" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Mental" id="Mental" data-trigger="reason-mental" class="trigger"><label class="moredetail" for="Mental">Mental health condition</label><br/>
-                              <div id="reason-mental" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Long" id="Long" data-trigger="reason-long" class="trigger"><label class="moredetail" for="Long">Long-term condition(s) - such as HIV, Dementia, Cancer or Multiple Scleroris</label><br/>
-                              <div id="reason-long" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other" class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
-                              <div id="reason-other" name="reasondetail" class="large-6 medium-6 cell hidden">
-                                  <label>Please provide more detail
-                                  <input type="text" name="flavor">
-                              </label>
-                              </div>
-                              <input type="checkbox" name="pokemon" value="Red" id="pokemonRed" onClick="ckChange(this)"><label for="pokemonRed">Patient would prefer not to say</label><br/>
-                          </div>
-                      </form>
-                      <br>
-                      <h5>Confirmation required</h5>
-                      <p>By continuing, you are confirming that you wish to add the patient impairment(s) to this Reasonable Adjustment flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
+                                          <p>The purpose of recording and sharing patient impairments is to help healthcare professionals understand and perform the associated adjustments required for each patient. This is not a list of all the <b>patient’s medical information</b> nor are these <b>Reasonable Adjustments</b>.</p>
+                                          <p><b>Please note:</b> If the patient <b>would not</b> like their impairments recording, check the <b>prefer not to say</b> box.</p>
+</div>
+
+                <br>
+
+                    <h5>Please select the impairments that should be considered when making reasonable adjustments.</h5>
+                    <br/>
+
+                    <form>
+                        <div class="large-6 cell">
+                              <input type="checkbox" name="pokemon" value="learning" id="learning" data-trigger="reason-learning" class="trigger"><label class="moredetail" for="learning">Learning disability(s)</label><br/>
+                            <div id="reason-learning"  class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Autism" id="Autism" data-trigger="reason-autism" class="trigger"><label class="moredetail" for="Autism">Autism</label><br/>
+                            <div id="reason-autism" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Sensory" id="Sensory" data-trigger="reason-sensory" class="trigger"><label class="moredetail" for="Sensory">Sensory disability(s) - such as sight, hearing or verbal</label><br/>
+                            <div id="reason-sensory" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Physical" id="Physical" data-trigger="reason-physical" class="trigger"><label class="moredetail" for="Physical">Physical disability(s)</label><br/>
+                            <div id="reason-physical" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Mental" id="Mental" data-trigger="reason-mental" class="trigger"><label class="moredetail" for="Mental">Mental health condition</label><br/>
+                            <div id="reason-mental" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Long" id="Long" data-trigger="reason-long" class="trigger"><label class="moredetail" for="Long">Long-term condition(s) - such as HIV, Dementia, Cancer or Multiple Scleroris</label><br/>
+                            <div id="reason-long" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Other" id="Other" data-trigger="reason-other" class="trigger"><label class="moredetail" for="Other">Other condition(s) and/or disability(s)</label><br/>
+                            <div id="reason-other" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail of the impairment
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
+                            <input type="checkbox" name="pokemon" value="Red" id="pokemonRed" onClick="ckChange(this)"><label for="pokemonRed">Patient would prefer not to say</label><br/>
+                        </div>
+                    </form>
+                    <br>
+
+                    <div class="callout secondary">
+                    <h4>Confirmation Required</h4>
+                    <p style="font-size:1em;">By continuing, you are confirming that you wish to add the patient impairment(s) to this Reasonable Adjustment flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
 
 
                     </div>
-                </div>
+
+
+                  </div>
+              </div>
                   <hr width="98%" >
 
                 <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">

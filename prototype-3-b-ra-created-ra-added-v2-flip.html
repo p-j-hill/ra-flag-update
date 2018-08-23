@@ -321,12 +321,72 @@
 
         <div class="grid-x">
             <div class="cell">
-                <br/>
-                <h3>Please confirm you wish to remove this Reasonable adjustment</h3><br/>
+                <h3>Please confirm you wish to remove this Reasonable adjustment</h3>
+                <p>To remove this Reasonable Adjustment you must provide a reason. Select one from below and enter any additional details.</p>
+
+                <form>
+
+                        <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="in-error" class="trigger"><label for="pokemonRed">The Individual Adjustment was created in error</label><br/>
+                        <div id="in-error" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                      </div>
+
+                        <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="not-correct" class="trigger"><label for="q">The Individual Adjustment was not correct</label><br>
+                        <div id="not-correct" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                        </div>
+
+                        <input type="radio" name="pokemon" value="Red" id="w" required data-trigger="dissent" class="trigger"><label for="w">The patient has dissented to the sharing of Individual Adjustment</label>
+                        <br/>
+                        <div id="dissent" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                        </div>
+                        <input type="radio" name="pokemon" value="Red" id="e" required data-trigger="legal" class="trigger"><label for="e">The legal has dissented to the sharing of Individual Adjustment</label>
+                        <br/>
+                        <div id="legal" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                        </div>
+
+                        <input type="radio" name="pokemon" value="Red" id="e" required data-trigger="best-interest" class="trigger"><label for="e">A best interest decision was taken to remove the Individual Adjustment</label>
+                        <br/>
+                        <div id="best-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                        </div>
+
+                        <input type="radio" name="pokemon" value="Red" id="e" required data-trigger="applies" class="trigger"><label for="e">The Individual Adjustment no longer applies to the patient</label>
+                        <br/>
+                        <div id="applies" name="reasondetail" class="large-6 medium-6 cell hidden">
+                            <label>Please provide more detail
+                            <input type="text" name="flavor">
+                        </label>
+                        </div>
+
+                </form>
+
+
             </div>
+
+
+
         </div>
 
-        <a class="button primary" href="prototype-3-b-ra-removed.html">Yes, I wish to remove this reasonable adjustment</a> &nbsp;
+
+        <hr>
+
+        <h5>Confirmation required</h5>
+        <p>By continuing, you are confirming that you wish to remove this Reasonable Adjustment from this Reasonable Adjustment flag.</p>
+
+        <a class="button primary" href="#/">Yes, I wish to remove</a> &nbsp;
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>
@@ -338,20 +398,7 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/vendor/top.js"></script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason").toggleClass("hide", this.value !== "Yellow");
-        });
-        //# sourceURL=pen.js
 
-    </script>
-    <script>
-        jQuery("input[name=pokemon]").click(function() {
-            jQuery("#reason2").toggleClass("hide", this.value !== "Purple");
-        });
-        //# sourceURL=pen.js
-
-    </script>
     <script>
         $(document).foundation();
         $(document).ready(function() {
@@ -359,6 +406,80 @@
         });
 
     </script>
+
+    <script>
+    /**
+*	Multiple Hidden Areas in a Form.
+*
+*	Instructions:
+*
+* 1. Add the 'trigger' class to checkboxes that will act as a trigger to show/hide area.
+* 2. Create a wrapper <div> around the field(s) you want to hide and give this an ID (whatever you want) and the class 'hidden'.
+* 3. Moving back to the checkbox, add a data-trigger attribute and set its value to the ID of the wrapper div that contains the fields you want to hide.
+* e.g. <input type="checkbox" name="checkbox" id="checkbox" class="trigger" data-trigger="my_hidden_fields">
+*      <div id="my_hidden_fields" class="hidden">
+*        Name: <input type="text" name="name">
+*      </div>
+*
+* The code below will automatically setup event listeners for any checkboxes with the 'trigger' class.
+* All elements with the 'hidden' class will be hidden when the page loads.
+* When a checkbox is checked the code will take the value from the data-trigger attribute on the
+* checkbox and use this to select the wrapper <div> that needs to be shown/hidden.
+*/
+
+
+$(function() {
+
+  // Hide the hidden sections.
+  // Use JS to do this in case the user doesn't have JS
+  // enabled.
+  $('.hidden').hide();
+
+  // Setup an event listener for each trigger checkbox that
+  // fires when the state of the checkbox changes.
+  $('.trigger').change(function() {
+   	// Get the ID of the hidden area from the data-trigger
+    // attribute.
+    var hiddenId = $(this).attr("data-trigger");
+
+    // Check to see if the checkbox is checked.
+    // If it is, show the fields and populate the input.
+    // If not, hide the fields.
+    if ($(this).is(':checked')) {
+      // Show the hidden fields.
+      $("#" + hiddenId).show();
+    } else {
+      // Make sure that the hidden fields are indeed
+      // hidden.
+      $("#" + hiddenId).hide();
+
+      // You may also want to clear the value of the
+      // hidden fields here. Just in case somebody
+      // shows the fields, enters data to them and then
+      // unticks the checkbox.
+      //
+      // This would do the job:
+      //
+      // $("#hidden_field").val("");
+    }
+  });
+});
+    </script>
+
+
+    <script>
+    // toggle disabling all check boxes
+    function ckChange(el) {
+
+      $('.hidden').hide();
+
+  }
+
+
+        //# sourceURL=pen.js
+
+    </script>
+
 </body>
 
 </html>

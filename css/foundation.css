@@ -591,6 +591,17 @@ h4, .h4 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
+ .step {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    border-bottom: 5px solid #005EB8;
+    padding-bottom: 10px;
+    display: inline-block;
+
+    }
+
 h5, .h5, .main-label {
   font-size: 1.0625rem;
   line-height: 1.4;
@@ -652,7 +663,13 @@ ul {
   list-style-type: disc; }
 
 ol {
-  margin-left: 1.25rem; }
+  margin-left: 1.25rem;
+  font-weight:bolder;
+}
+
+ol li span {
+  font-weight: normal;
+}
 
 ul ul, ol ul, ul ol, ol ol {
   margin-left: 1.25rem;
@@ -3109,7 +3126,7 @@ width: 100%;}
     background-color: #cee7ff;
     color: #0a0a0a; }
   .callout.secondary {
-    background-color: #ecf4fa;
+    background-color: #f0f4f5;
     color: #0a0a0a; }
   .callout.alert {
     background-color: #fcd6d6;
@@ -3124,7 +3141,7 @@ width: 100%;}
     background-color: #e0e6ea;
     color: #0a0a0a; }
   .callout.header {
-    background-color: #e0e6ea;
+    background-color: #f0f4f5; /*#e0e6ea*/
     color: #0a0a0a; }
   .callout.small {
     padding-top: 0.5rem;
@@ -3484,9 +3501,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .has-tip {
   position: relative;
   display: inline-block;
-  border-bottom: dotted 1px #8a8a8a;
+  /*border-bottom: dotted 1px #8a8a8a;
   font-weight: bold;
-  cursor: help; }
+  cursor: help;*/ }
 
 .tooltip {
   position: absolute;

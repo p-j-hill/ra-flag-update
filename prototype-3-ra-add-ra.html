@@ -78,7 +78,7 @@
                 <a href="#" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Chargeable status</a>
             </div>
             <div class="large-shrink medium-3 small-6 cell">
-                <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments</a>
+              <a href="#" class="button button tabby tabby-active" style="width: 100%;" data-equalizer-watch>Reasonable adjustments <span class="badge alert">&nbsp;</span></a>
             </div>
             <div class="large-shrink medium-3 small-6 cell">
                 <a data-open="exampleModal1" class="button button tabby tabby-inactive" style="width: 100%;" data-equalizer-watch>Summary Care Record </a>
@@ -97,30 +97,33 @@
                     <div class="cell">
 
                       <br/>
-                      <h3 style="display:inline-block;">Add Reasonable Adjustments</h3>
-                      <button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>
+                      <h3 style="display:inline-block;">Add Reasonable Adjustments</h3><br><br>
+                      <!--<button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>-->
 
-                      <h4>Step 1 of 2</h4><br/>
+                      <h4 class="step">Step 1 of 2 - Adding the adjustments</h4><br/>
                       <div class="callout primary">
-                          <h4>Tips for adding reasonable adjustments</h4>
+                          <h4>How to add Reasonable Adjustments</h4>
+                          <p style ="font-size:1em;">To add reasonable adjustments you can:
                           <ul>
-                            <li>Start by typing a reasonable adjustment. Suggestons will be shown as you type.</li>
-                          <li>Select the one that matches by pressing from the list. Then press <b>Add</b>. </li>
-                        	<li>If nothing matches, continue typing to add your own, remembering to press <b>Add</b> after you have finished typing.</li>
-                        	<li>The selected reasonable adjustments appear on the right.</li>
-                        	<li>When you have added all reasonable adjustments press <b>Next</b>.</li>
+                            <li>Type keywords or phrases into the input box to find the adjustments required</li>
+                          <li>Use the input box to create a bespoke adjustment</li>
 
                             </ul>
+                            <p style ="font-size:1em;">When you have added all the required adjustments press <b>Next</b>.</p>
+
                           </div>
 
                     </div>
                 </div>
-
+<br>
                 <div class="grid-x grid-padding-x">
                     <div class="large-6 medium-12 cell">
                       <br>
-                      <label class="main-label">Search for or create bespoke Reasonable Adjustments</label>
-                      <p>If you know the Reasonable Adjustment enter a keyword or phrase in the box. <br>To create your own bespoke Reasonable Adjustment enter it in the box.</p>
+                      <label class="main-label">Enter or search for Reasonable Adjustments</label>
+                      <ul><li>Start typing keywords until you find an adjustment to match.</li>
+                        <li>If you cannot find a match, you can create a bespoke adjustment instead by continuing to type.</li>
+                        <li>Remember to press <b>Add</b> when you're done.</li>
+</ul>
 
                       <span class="form-hint">Example Reasonable Adjustment: Requires contact by telephone</span>
                       <div class="input-group"><input class="input-group-field" name="country" id="autocomplete" type="text" placeholder="Enter Reasonable Adjustment or create your own" pattern="" required="">
@@ -131,6 +134,7 @@
 
 
                     </div>
+
                     <div class="large-6 medium-12 cell">
                         <fieldset class="fieldset">
                             <span class="panel-main-label">Added Reasonable Adjustments (<span class="ra-number">0</span>)</span>
@@ -139,7 +143,12 @@
                                 <div class="medium-12 large-12 cell">
                                     <div class="panel-info-group cell">
                                         <div class="ra-no-content">
-                                          <p><strong>Currently no Reasonable Adjustments added</strong><br/>Use the input box to add Reasonable Adjustments</p>
+                                          <p><strong>Currently no Reasonable Adjustments added</strong></p>
+                                          <ul>
+                                            <li>Use the input box to add Reasonable Adjustments</li>
+                                          <li>You can add additional details or delete Reasonable Adjustments here.</li>
+                                        </ul>
+
                                         </div>
                                         <!--<div class="ra-container">
                                             <div class="ra-added1"><span class="ra-category">Communication support</span><p>' + text + '</p></div>
@@ -210,7 +219,7 @@
 
 
     if (text == "Does lip read") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
       $("div.ra-no-content").hide();
       $('.show_hide').click(function(){
           $("#reason-details1").toggle();
