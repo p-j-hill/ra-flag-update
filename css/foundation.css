@@ -2700,6 +2700,17 @@ width: 100%;}
   :last-child > .accordion-content:last-child {
     border-bottom: 1px solid #e6e6e6; }
 
+    .category-content {
+      padding: 1rem;
+      /*overflow-y: scroll; */
+
+      border-radius: 5px;
+      border: 1px solid #ECECEC;
+      background-color: white;
+      color: #0a0a0a; }
+
+
+
 .dropdown-pane {
   position: absolute;
   z-index: 10;
@@ -3994,8 +4005,8 @@ transition: 0.5s;}
   margin-left: -0.9375rem; }
 
 .grid-padding-x > .cell {
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem; }
+  padding-right: 2.9375rem;
+  padding-left: 2.9375rem; }
 
 .small-up-1 > .cell {
   width: 100%; }

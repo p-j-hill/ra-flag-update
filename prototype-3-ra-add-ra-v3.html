@@ -98,23 +98,15 @@
                                       <div class="cell">
 
                                         <br/>
-                                        <h3 style="display:inline-block;">Add Reasonable Adjustments</h3><br><br>
-                                        <!--<button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>-->
-
-                                        <h4 class="step">Step 1 of 2 - Adding the adjustments</h4><br/>
-                                        <!--<div class="callout primary">
-                                            <h4>How to add Reasonable Adjustments</h4>
-                                            <p style ="font-size:1em;">To add reasonable adjustments you can:
-                                            <ul>
-                                              <li>Browse the category list and tick the adjustments required</li>
-                                              <li>Type keywords or phrases into the input box to find the adjustments required</li>
-                                            <li>Use the input box to create a bespoke adjustment</li>
-
-                                              </ul>
-                                              <p style ="font-size:1em;">When you have added all the required adjustments press <b>Next</b>.</p>
-
-                                            </div>-->
-
+                                        <h3>Create a Reasonable Adjustment flag</h3><br/>
+                                        <div class="container-progress">
+                                        <ul class="progressbar">
+                                          <li class="done"><a href="prototype-3-ra-consent-v3.html">Record Consent</a></li>
+                                          <li class="done"><a href="prototype-3-ra-impairment-v3.html">Patient Impairments</a></li>
+                                          <li class="selected">Reasonable Adjustments</li>
+                                          <li >Confirmation</li>
+                                        </ul>
+                    </div>
                                       </div>
                                   </div>
                   <br>
@@ -300,8 +292,10 @@
                   <hr width="95%" >
                   <div class="grid-x grid-padding-x">
                   <div class="cell">
-                  <a class="button primary" href="prototype-3-b-ra-added-v2.html">Next</a> &nbsp;
-                  <a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
+                  <a class="button primary" href="prototype-3-b-ra-added-v3.html">Next</a> &nbsp;
+                  <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
+
+                  <a class="button ghost" href="#" data-open="flag-exit">Cancel</a>
 </div>
 
                 </div>
@@ -319,7 +313,17 @@
 
     </div>
 
+    <div class="reveal large" id="flag-exit" data-reveal>
+        <br/>
+        <h3>Cancel creating a Reasonable Adjustment flag</h3><br/>
+        <p>Please be aware that by cancelling at this stage the Reasonable Adjustment flag <b>will be created with patient impairments saved</b>.</p><br/>
+        <a class="button primary" href="prototype-3-b-ra-created-v3.html">Yes, I wish to save and cancel</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Continue creating flag</a>
 
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
 
 
     <script src="js/vendor/jquery.js"></script>

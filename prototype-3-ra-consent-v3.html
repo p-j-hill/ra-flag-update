@@ -95,7 +95,19 @@
                   <div class="cell">
                     <br/>
                     <h3>Create a Reasonable Adjustment flag</h3><br/>
-                    <h4 class="step">Step 1 of 2 -  Record Consent</h4><br/>
+
+                    <div class="container-progress">
+                    <ul class="progressbar">
+                      <li class="selected">Record Consent</li>
+                      <li >Patient Impairments</li>
+                      <li >Reasonable Adjustments</li>
+                      <li >Confirmation</li>
+                    </ul>
+</div>
+
+      <br>
+
+<!--                    <h4 class="step">Step 1 of 2 -  Record Consent</h4><br/>-->
 
                     <h5>How has consent been obtained in order to create this Reasonable Adjustment flag?</h5>
                     <br/>
@@ -131,12 +143,10 @@
                   <hr width="95%">
                   <div class="grid-x grid-padding-x" >
                     <div class="cell">
-                  <a class="button primary" href="prototype-3-ra-impairment-v2.html">Next</a> &nbsp;
-                  <a class="button ghost" href="javascript: history.go(-1)">Cancel</a>
+                  <a class="button primary" href="prototype-3-ra-impairment-v3.html">Next</a> &nbsp;
+                  <a class="button ghost" href="#" data-open="flag-exit">Cancel</a>
 
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
-                <span aria-hidden="true">&times;</span>
-                </button>
+
               </div>
                 </div>
                 <br><br><br><br><br>
@@ -266,13 +276,12 @@
   </button>
     </div>
 
-    <div class="reveal large" id="flag-confirm" data-reveal>
+    <div class="reveal large" id="flag-exit" data-reveal>
         <br/>
-        <h3>Please confirm you wish to create a reasonable adjustment flag</h3><br/>
-        <p>Please be aware any information entered in the flag will be shared nationally</p><br/>
-        <a class="button primary" href="prototype-3-b-ra-created.html">Yes, I wish to create a Reasonable Adjustment flag</a> &nbsp;
-        <a class="button ghost " href="#" data-open="exampleModal1">Back</a> &nbsp;
-        <a class="button ghost " href="#" data-close>Cancel</a>
+        <h3>Cancel creating a Reasonable Adjustment flag</h3><br/>
+        <p>Please be aware that by cancelling at this stage the Reasonable Adjustment flag will not be created.</p><br/>
+        <a class="button primary" href="prototype-3-ra-v3.html">Yes, I wish to cancel</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Continue creating flag</a>
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>

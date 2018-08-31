@@ -169,17 +169,17 @@
                     </div>
                 </div>
 
-                  <hr width="98%" >
-                  <div class="grid-x grid-padding-x" style="padding-left: 0.9em;">
+                <hr width="95%" >
+                <div class="grid-x grid-padding-x">
+                <div class="cell">
+                <a class="button primary" href="prototype-3-b-ra-added.html">Next</a> &nbsp;
+                <a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
+</div>
 
-                  <a class="button primary" href="prototype-3-b-ra-added.html">Next</a> &nbsp;
-                  <a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
-
-
-                </div>
-                <br><br><br><br><br>
-            </div>
-        </div>
+              </div>
+              <br><br><br><br><br>
+          </div>
+      </div>
 
         <div id="footer" class="grid-container">
             <div class="grid-x grid-padding-x grid-margin-x">
@@ -219,11 +219,11 @@
 
 
     if (text == "Does lip read") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
       $("div.ra-no-content").hide();
       $('.show_hide').click(function(){
           $("#reason-details1").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Done' ? 'Add Details' : 'Done' );
       });
 
       $('.delete_ra').click(function(){
@@ -234,7 +234,7 @@
       });
 
     } else if (text == "British Sign Language interpreter needed") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container2"><div class="ra-added1"><span class="ra-category">Category: Requires Communication Professional</span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details2" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" id="ra-container2"><div class="ra-added1"><span class="ra-category">Category: Requires Communication Professional</span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details2" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
       $("div.ra-no-content").hide();
       $('.show_hide').click(function(){
           $("#reason-details2").toggle();
@@ -251,19 +251,19 @@
 /*Carer needs to be present at all health appointments. Their contact details are 07121722022*/
 } else if (text == "A carer needs to be present at all health appointments") {
 
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container3"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra">Delete</button></div></div><div class="reason-details" id="reason-details3" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
-      $("div.ra-no-content").hide();
-      $('.show_hide').click(function(){
-          $("#reason-details3").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
-      });
+  $(".panel-info-group").append('<div class="ra-container" id="ra-container4"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details4" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+  $("div.ra-no-content").hide();
+  $('.show_hide').click(function(){
+      $("#reason-details4").toggle();
+      $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+  });
 
-      $('.delete_ra').click(function(){
-          $("#ra-container3").hide();
-          $("div.ra-no-content").show();
-          clicks = 0;
-          $('.ra-number').html(0);
-      });
+  $('.delete_ra').click(function(){
+      $("#ra-container4").hide();
+      $("div.ra-no-content").show();
+      clicks = 0;
+      $('.ra-number').html(0);
+  });
 
 
 

@@ -128,26 +128,88 @@
 
             <div id="in-page-content" class="cell">
 
-                <div class="grid-x grid-padding-x">
-                    <div class="cell">
-                      <br/>
-                      <h3 style="display:inline-block;">Add Reasonable Adjustments</h3><br><br>
-                      <!--<button class="button hollow show-for-medium" style="float:right;">View Reasonable Adjustment flag</button>-->
 
-                      <h4 class="step">Step 2 of 2 - Confirmation</h4><br/>
 
-                      <ul><li>Please review your selected Reasonable Adjustments before confirming. You can edit or delete these if you require. </li>
-                          <li>Scroll to the bottom of the page to confirm and add these adjustments.</li>
-                        </ul>
+              <div class="grid-x grid-padding-x">
+                  <div class="cell">
+                    <br/>
+                    <h3>Create a Reasonable Adjustment flag</h3><br/>
+                    <div class="container-progress">
+                    <ul class="progressbar">
+                      <li class="done"><a href="prototype-3-ra-consent-v3.html">Record Consent</a></li>
+                      <li class="done"><a href="prototype-3-ra-impairment-v3.html">Patient Impairments</a></li>
+                      <li class="done"><a href="prototype-3-ra-add-ra-v3.html">Reasonable Adjustments</a></li>
+                      <li class="selected">Confirmation</li>
+                    </ul>
+        </div>
+                    <ul><li>Please review your selected <a href="#" class="impairment">Patient Impairments</a> and <a href="#" class="adjustment">Reasonable Adjustments</a> before confirming. You can edit or delete these if you require. </li>
+                        <li>Scroll (or <a href="#" class="confirmation">click here</a>) to go the bottom of the page to confirm and create the flag.</li>
+                      </ul>
 
-                    </div>
-                </div>
+                  </div>
+              </div>
 
-                <div class="grid-x grid-padding-x">
+
+              <div class="grid-x grid-padding-x" id="impairments">
+                  <div class="large-12 medium-12 cell" >
+                      <fieldset class="fieldset">
+                          <!--   <legend>Patient impairment(s) to consider when making adjustments:</legend> -->
+                          <span class="panel-main-label">Patient impairment(s) to consider when making adjustments:</span>
+                          <hr>
+                          <div id="panel-key" class="grid-x">
+                              <div class="medium-12 large-12 cell">
+                                  <div class="panel-info-group cell">
+                                      <table width="100%" class="hover stack">
+                                          <thead>
+                                              <tr>
+                                                  <th width="20%;">Patient impairment</th>
+                                                  <th width="40%;">Additional detail</th>
+                                                  <th>Added</th>
+                                                  <th>...</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td class="table-ra">Learning Disability</td>
+                                                  <td class="table-detail">William as a severe learning disability</td>
+                                                  <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
+                                                  </td>
+                                                  <td class="table-cta">
+                                                      <div class="medium-12 small-12 large-12 cell">
+
+                                                          <a class="button hollow alert small expanded">Delete</a>
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="table-ra">Sensory Disability</td>
+                                                  <td class="table-detail">William has a severe visual impairment
+                                                  </td>
+                                                  <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
+                                                  </td>
+                                                  <td class="table-cta">
+                                                      <div class="medium-12 small-12 large-12 cell">
+                                                          <a class="button hollow alert small expanded">Delete</a>
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                  <div class="medium-12 small-12 large-12 cell">
+                                      <a href="prototype-3-ra-impairment-v3.html" class="button primary" style="margin-bottom: 0; float: right; margin-right: 10px;">Add / Edit Patient Impairments</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+              </div>
+
+                <div class="grid-x grid-padding-x" id="adjustments">
                     <div class="large-12 medium-12 cell">
-                        <fieldset class="fieldset">
+                        <fieldset class="fieldset" style="min-height:282px;">
                             <!--  <legend>Potential adjustments:</legend> -->
-                            <span class="panel-main-label">Selected Reasonable Adjustments:</span>
+                            <span class="panel-main-label">Reasonable Adjustments:</span>
                             <hr>
                             <div id="panel-key" class="grid-x">
                                 <div class="medium-12 large-12 cell">
@@ -165,10 +227,10 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="table-ra">Does lip read</td>
-                                                        <td class="table-detail">William is able to lip read clearly.
+                                                        <td class="table-ra">Requires adjustments to minimalise waiting times</td>
+                                                        <td class="table-detail">Patient requires adjustments when waiting in order to reduce the time they have to wait.
                                                         </td>
-                                                        <td class="table-category">Communication Support</td>
+                                                        <td class="table-category">Requires adjustments to the environment</td>
                                                         <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
                                                         </td>
                                                         <td class="table-cta">
@@ -182,26 +244,10 @@
                                                         </td>
                                                     </tr>
 
-                                                    <tr>
-                                                        <td class="table-ra">British Sign Language interpreter needed</td>
-                                                        <td class="table-detail">William requires a British sign language interpreter to be present at all times to assist him when needed.
-                                                        </td>
-                                                        <td class="table-category">Requires Communication Professional</td>
-                                                        <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
-                                                        </td>
-                                                        <td class="table-cta">
-                                                            <div class="medium-12 small-12 large-12 cell">
-                                                                <a class="button hollow primary small expanded">Edit</a>
-                                                            </div>
-                                                            <div class="medium-12 small-12 large-12 cell">
 
-                                                                <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
                                                     <tr>
-                                                        <td class="table-ra">Carer needs to be present at all health appointments </td>
-                                                        <td class="table-detail">William requires a carer to be present at all health appointments. Their contact details are 07121722022.
+                                                        <td class="table-ra">The patient may get upset.</td>
+                                                        <td class="table-detail">The patient may get upset and if they do get upset she will need her mum contacted. Her mum’s contact number is 0798765432.
                                                         </td>
                                                         <td class="table-category">Bespoke</td>
                                                         <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
@@ -219,16 +265,17 @@
 
                                                 </tbody>
                                             </table>
-                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra.html">Add More Reasonable Adjustments</a>
+                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra-v3.html">Add / Edit Reasonable Adjustments</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
+
                         <br>
-                        <div class="callout secondary">
+                        <div class="callout secondary" id="confirmation">
                         <h4>Confirmation Required</h4>
-                        <p style="font-size:1em;">By continuing, you are confirming that you wish to add the Reasonable Adjustments(s) to this flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
+                        <p style="font-size:1em;">By continuing, you are confirming that you wish to add the Patient Impairments and Reasonable Adjustments(s) to this flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
 
 
                         </div>
@@ -242,10 +289,10 @@
                 <div class="grid-x grid-padding-x">
                 <div class="cell">
 
-                <a href="prototype-3-b-ra-added-confirmed.html" class="button primary">Yes, I wish to add</a> &nbsp;
+                <a href="prototype-3-b-ra-added-confirmed-v3.html" class="button primary">Yes, I wish to add</a> &nbsp;
                 <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
 
-<a class="button ghost" href="prototype-3-b-ra-created.html">Cancel</a>
+<a class="button ghost" href="prototype-3-b-ra-created.html-v3">Cancel</a>
 </div>
 </div>
 
@@ -275,6 +322,27 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/vendor/top.js"></script>
+
+    <script>
+    $(".confirmation").click(function(){
+      $('html, body').animate({
+                 scrollTop: $("#confirmation").offset().top
+             }, 500);
+              });
+
+              $(".impairment").click(function(){
+                $('html, body').animate({
+                           scrollTop: $("#impairments").offset().top
+                       }, 500);
+                        });
+
+                        $(".adjustment").click(function(){
+                          $('html, body').animate({
+                                     scrollTop: $("#adjustments").offset().top
+                                 }, 500);
+                                  });
+
+    </script>
 
 </body>
 
