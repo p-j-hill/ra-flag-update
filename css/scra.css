@@ -633,8 +633,8 @@ margin-top: 20px;
 
 .ra-added1  {
 display: block;
-float: left;
-width: 72%;
+
+width: 100%;
 overflow: hidden;
 
 }
@@ -643,23 +643,38 @@ overflow: hidden;
   display: block;
   font-size: 1.15em;
   line-height: normal;
+  font-weight: bold;
+}
+
+p.reason-text {
+  display: block;
+  font-size: .9em;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin-top: -14px;
+  width:100%;
+  overflow: hidden;
 }
 
 .added-buttons {
-  float: right;
-  text-align: right;
+
   display: block;
   overflow: hidden;
 
 }
 
-.detail-button {
-}
-/*.
+
 .delete-button {
   float: left;
-  margin-top: 6px;
-}*/
+}
+
+
+.detail-button {
+  float: left;
+  display: block;
+  margin-right: 10px;
+
+}
 
 .ra-category {
 display: block;

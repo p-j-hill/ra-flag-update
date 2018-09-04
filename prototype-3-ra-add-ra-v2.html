@@ -285,8 +285,7 @@
 
 
                                         <div class="ra-container" id="ra-container3a" style="display:none;">
-                                          <div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>Requires adjustment to minimise waiting times</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra3" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide3a" style="width:110px;"></div></div><div class="reason-details" id="reason-details3a" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>
-
+                                          <div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>Requires adjustment to minimise waiting times</p><p class="reason-text3a-display reason-text" style="display:none;"></p></div><div class="reason-details" id="reason-details3a" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea id="reason-text3a" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="added-buttons"><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide3a" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra3" style="width:110px;">Delete</button></div></div>
 
 
 
@@ -350,93 +349,205 @@
 
 
     if (text == "Does lip read") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" style="display: none;" id="ra-container1"><div class="ra-added1"><span class="ra-category">Category: Communication support</span><p>' + text + '</p><p class="reason-text1-display reason-text" style="display:none;"></p></div><div class="reason-details" id="reason-details1" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea id="reason-text1" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="added-buttons"><div class="detail-button"><input type="button" id="add-details" value="Save" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div></div>');
+      $("#ra-container1").fadeIn(600);
       $("div.ra-no-content").hide();
       $('html, body').animate({
                  scrollTop: $("#selected-ras").offset().top
              }, 500);
+
       $('.show_hide').click(function(){
+          var details = $('#reason-text1').val().trim().substring(0, 140).trim(this) + "...";
+        //console.log(details);
+
           $("#reason-details1").toggle();
-          $(this).val( $(this).val() == 'Done' ? 'Add Details' : 'Done' );
+          $(this).val( $(this).val() == 'Save' ? 'Add Details' : 'Save' );
+          $('p.reason-text1-display').text(details);
+          $('p.reason-text1-display').slideToggle(200);
+
+
+          if (details == "...") {
+            $('p.reason-text1-display').hide();
+            $(this).val('Add details');
+          }
+          else if (details != "...") {
+            $(this).val('Edit Details');
+          };
+
+          if ($("#reason-text1").is(":visible")) {
+            $(this).val('Save');
+
+          };
+
+
       });
 
       $('.delete_ra').click(function(){
           $("#ra-container1").hide();
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn(600);
           $('.ra-number').html(0);
           clicks = 0;
       });
 
     } else if (text == "British Sign Language interpreter needed") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container2"><div class="ra-added1"><span class="ra-category">Category: Requires Communication Professional</span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details2" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" style="display: none;" id="ra-container2"><div class="ra-added1"><span class="ra-category">Category: Requires Communication Professional</span><p>' + text + '</p><p class="reason-text2-display reason-text" style="display:none;"></p></div><div class="reason-details" id="reason-details2" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea id="reason-text2" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="added-buttons"><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div></div>');
+      $("#ra-container2").fadeIn(600);
       $("div.ra-no-content").hide();
       $('html, body').animate({
                  scrollTop: $("#selected-ras").offset().top
              }, 500);
       $('.show_hide').click(function(){
+
+        var details2 = $('#reason-text2').val().trim().substring(0, 140).trim(this) + "...";
+
           $("#reason-details2").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Add Details' ? 'Save' : 'Add Details' );
+
+
+                    $('p.reason-text2-display').text(details2);
+                    $('p.reason-text2-display').slideToggle(200);
+
+                    if (details2 == "...") {
+                      $('p.reason-text2-display').hide();
+                      $(this).val('Add details');
+                    }
+                    else if (details2 != "...") {
+                      $(this).val('Edit Details');
+                    };
+
+                    if ($("#reason-text2").is(":visible")) {
+                      $(this).val('Save');
+
+                    };
+
       });
 
       $('.delete_ra').click(function(){
           $("#ra-container2").hide();
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn(600);
           clicks = 0;
           $('.ra-number').html(0);
       });
 
       } else if (text == "Requires adjustment to minimise waiting times") {
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container3"><div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Done" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details3" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" style="display: none;" id="ra-container3"><div class="ra-added1"><span class="ra-category">Category: Requires adjustments to the environment</span><p>' + text + '</p><p class="reason-text3-display reason-text" style="display:none;"></p></div><div class="reason-details" id="reason-details3" name="reasondetail" style="display:block; clear:both;"><label>Please provide more detail<textarea id="reason-text3" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="added-buttons"><div class="detail-button"><input type="button" id="add-details" value="Save" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div></div>');
+      $("#ra-container3").fadeIn(600);
+
       $("div.ra-no-content").hide();
       $('html, body').animate({
                  scrollTop: $("#selected-ras").offset().top
              }, 500);
       $('.show_hide').click(function(){
+
+        var details3 = $('#reason-text3').val().trim().substring(0, 140).trim(this) + "...";
+
           $("#reason-details3").toggle();
-          $(this).val( $(this).val() == 'Done' ? 'Add Details' : 'Done' );
+          $(this).val( $(this).val() == 'Add Details' ? 'Save' : 'Add Details' );
+
+
+                    $('p.reason-text3-display').text(details3);
+                    $('p.reason-text3-display').slideToggle(200);
+
+                    if (details3 == "...") {
+                      $('p.reason-text3-display').hide();
+                      $(this).val('Add details');
+                    }
+                    else if (details3 != "...") {
+                      $(this).val('Edit Details');
+                    };
+
+                    if ($("#reason-text3").is(":visible")) {
+                      $(this).val('Save');
+
+                    };
+
+
+
       });
 
       $('.delete_ra').click(function(){
           $("#ra-container3").hide();
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn(600);
           clicks = 0;
           $('.ra-number').html(0);
       });
 
     } else if (text == "A carer needs to be present at all health appointments") {
 
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container4"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details4" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" style="display: none;" id="ra-container4"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p><p class="reason-text4-display reason-text" style="display:none;"></p></div><div class="reason-details" id="reason-details4" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea id="reason-text4" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="added-buttons"><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div></div>');
+      $("#ra-container4").fadeIn(600);
+
       $("div.ra-no-content").hide();
       $('html, body').animate({
                  scrollTop: $("#selected-ras").offset().top
              }, 500);
       $('.show_hide').click(function(){
+        var details4 = $('#reason-text4').val().trim().substring(0, 140).trim(this) + "...";
+
           $("#reason-details4").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Add Details' ? 'Save' : 'Add Details' );
+
+
+                    $('p.reason-text4-display').text(details4);
+                    $('p.reason-text4-display').slideToggle(200);
+
+                    if (details4 == "...") {
+                      $('p.reason-text4-display').hide();
+                      $(this).val('Add details');
+                    }
+                    else if (details4 != "...") {
+                      $(this).val('Edit Details');
+                    };
+
+                    if ($("#reason-text4").is(":visible")) {
+                      $(this).val('Save');
+
+                    };
       });
 
       $('.delete_ra').click(function(){
           $("#ra-container4").hide();
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn( 600 );
           clicks = 0;
           $('.ra-number').html(0);
       });
 
     } else if (text == "The patient may get upset") {
 
-      $(".panel-info-group").append('<div class="ra-container" id="ra-container5"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div></div><div class="reason-details" id="reason-details5" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div>');
+      $(".panel-info-group").append('<div class="ra-container" style="display: none;" id="ra-container5"><div class="ra-added1"><span class="ra-category">Category: Bespoke  </span><p>' + text + '</p><p class="reason-text5-display reason-text" style="display:none;"></div><div class="reason-details" id="reason-details5" name="reasondetail" style="display:none; clear:both;"><label>Please provide more detail<textarea id="reason-text5" placeholder="If needed, please provide more details of the reasonable adjustment" style="max-width: 800px; min-height: 200px;"></textarea></label></div><div class="detail-button"><input type="button" id="add-details" value="Add Details" class="button hollow show-for-medium show_hide" style="width:110px;"></div><div class="added-buttons"><div class="delete-button"><button class="button hollow show-for-medium delete_ra" style="width:110px;">Delete</button></div></div>');
+      $("#ra-container5").fadeIn(600);
+
       $("div.ra-no-content").hide();
       $('html, body').animate({
                  scrollTop: $("#selected-ras").offset().top
              }, 500);
       $('.show_hide').click(function(){
+        var details5 = $('#reason-text5').val().trim().substring(0, 140).trim(this) + "...";
+
           $("#reason-details5").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Add Details' ? 'Save' : 'Add Details' );
+
+
+                    $('p.reason-text5-display').text(details5);
+                    $('p.reason-text5-display').slideToggle(200);
+
+                    if (details5 == "...") {
+                      $('p.reason-text5-display').hide();
+                      $(this).val('Add details');
+                    }
+                    else if (details5 != "...") {
+                      $(this).val('Edit Details');
+                    };
+
+                    if ($("#reason-text5").is(":visible")) {
+                      $(this).val('Save');
+
+                    };
       });
 
       $('.delete_ra').click(function(){
           $("#ra-container5").hide();
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn( 600 );
           clicks = 0;
           $('.ra-number').html(0);
       });
@@ -448,8 +559,8 @@
       });
 
 
-/**/
-var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').html(clicks);});
+    /**/
+    var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').html(clicks);});
 
 
 
@@ -457,14 +568,14 @@ var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').htm
       $(".checked-ra").click(function() {
           if($(this).is(":checked")) {
                 $("div.ra-no-content").hide();
-                $("#ra-container3a").show();
+                $("#ra-container3a").fadeIn( 600 );
                 $('html, body').animate({
                            scrollTop: $("#selected-ras").offset().top
                        }, 500);
 
           } else {
               $("#ra-container3a").hide();
-              $("div.ra-no-content").show();
+              $("div.ra-no-content").fadeIn(600);
 
               clicks = 0;
               $('.ra-number').html(0);
@@ -473,14 +584,33 @@ var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').htm
 
 
       $('.show_hide3a').click(function(){
+        var details3a = $('#reason-text3a').val().trim().substring(0, 140).trim(this) + "...";
+
           $("#reason-details3a").toggle();
-          $(this).val( $(this).val() == 'Add Details' ? 'Done' : 'Add Details' );
+          $(this).val( $(this).val() == 'Add Details' ? 'Save' : 'Add Details' );
+
+
+                    $('p.reason-text3a-display').text(details3a);
+                    $('p.reason-text3a-display').slideToggle(200);
+
+                    if (details3a == "...") {
+                      $('p.reason-text3a-display').hide();
+                      $(this).val('Add details');
+                    }
+                    else if (details3a != "...") {
+                      $(this).val('Edit Details');
+                    };
+
+                    if ($("#reason-text3a").is(":visible")) {
+                      $(this).val('Save');
+
+                    };
       });
 
       $('.delete_ra3').click(function(){
           $("#ra-container3a").hide();
           $('.checked-ra').prop('checked',false);
-          $("div.ra-no-content").show();
+          $("div.ra-no-content").fadeIn( 600 );;
           clicks = 0;
           $('.ra-number').html(0);
       });
