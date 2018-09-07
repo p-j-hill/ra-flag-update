@@ -135,19 +135,19 @@
 
                                                                                 <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                                                                                 <div class="category-content">
-                                                                                  <div >
+                                                                                  <!--<div >
                                                                                     <p id="category-title">Use these main categories to browse and select the Reasonable Adjustments that you wish to add. You can select more than one.</p>
                                                                                     <p id="category-commsupport" style="display:none;"><a href="#/" style="text-decoration: underline;" class="ra-cat-close">Categories</a> > Communication support</p>
                                                                                     <p id="category-contact" style="display:none;"><a href="#/" style="text-decoration: underline;" class="ra-cat-close">Categories</a> > Requires specific contact method</p>
                                                                                     <p id="category-enviro" style="display:none;"><a href="#/" style="text-decoration: underline;" class="ra-cat-close">Categories</a> > Adjustments to the Environment</p>
 
                                                                                     <hr>
-                                                                                  </div>
+                                                                                  </div>-->
 
 
-                                                                                      <div id="ra-categories-list">
+                                                                                      <div id="ra-categories-list" >
 
-                                                                                      <a href="#/" class="ra-reveal1" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication support that is appropriate to this patient with their identified impairment">Communication support</a> (20)<br>
+                                                                                      <a href="#/" class="show-com">Communication support</a> (20)<br>
                                                                                       <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires communication professional</a> (25)<br>
                                                                                       <a href="#/" class="ra-reveal2" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires specific contact method</a> (9)<br>
                                                                                       <a href="#" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Approaches that will help provide communication that is appropriate to this patient with their identified impairment">Requires specific information format</a> (11)<br>
@@ -160,7 +160,7 @@
 
                                                                                     </div>
 
-                                                                                    <div id="commsupport-list" style=" max-height: 230px; overflow: scroll;">
+                                                                                    <div id="commsupport-list">
                                                                                       <fieldset>
 
                                                                                         <input type="checkbox" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Does lip read
@@ -199,7 +199,7 @@
 
 
 
-                                                                                    <div id="contact-list" style=" max-height: 230px; overflow: scroll;">
+                                                                                    <div id="contact-list">
                                                                                       <fieldset>
 
                                                                                         <input type="checkbox" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Requires audible alert
@@ -234,7 +234,7 @@
                                                                                     </div>
 
 
-                                                                                    <div id="enviro-list" style=" max-height: 230px; overflow: scroll;">
+                                                                                    <div id="enviro-list">
                                                                                       <fieldset>
 
                                                                                         <input type="checkbox" name="pokemon" value="1" id="pokemon1" required><label for="pokemon1">Requires adjustment to provide low noise stimulus
@@ -292,10 +292,10 @@
                   <hr width="95%" >
                   <div class="grid-x grid-padding-x">
                   <div class="cell">
-                  <a class="button large primary" href="prototype-3-b-ra-added-v3.html">Next</a> &nbsp;
-                  <a class="button large ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
+                  <a class="button primary" href="prototype-3-b-ra-added-v3.html">Next</a> &nbsp;
+                  <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
 
-                  <a class="button large ghost" href="#" data-open="flag-exit">Cancel</a>
+                  <a class="button ghost" href="#" data-open="flag-exit">Cancel</a>
 </div>
 
                 </div>
@@ -659,6 +659,14 @@ var clicks = 0; $(".checked-ra").click(function(){ clicks++; $('.ra-number').htm
           $("#contact-list").hide();
           $("#enviro-list").hide();
       });
+
+
+      $('.show-com').click(function() {
+
+        $('#commsupport-list').toggle('slide', { direction: 'right' }, 1000);
+
+         });
+
 
 
       </script>

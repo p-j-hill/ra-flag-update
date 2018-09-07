@@ -142,9 +142,16 @@
                       <li class="selected">Review and Save</li>
                     </ul>
         </div>
-                    <ul><li>Please review your selected <a href="#" class="impairment">Patient Impairments</a> and <a href="#" class="adjustment">Reasonable Adjustments</a> before saving. You can edit or delete these if you require. </li>
-                        <li>Scroll (or <a href="#" class="confirmation">click here</a>) to go the bottom of the page to confirm and create the flag.</li>
-                      </ul>
+
+        <div class="callout primary" id="confirmation">
+        <h4>Confirmation Required</h4>
+        <ol><li><span>Please review your selected <a href="#" class="impairment">Patient Impairments</a> and <a href="#" class="adjustment">Reasonable Adjustments</a> before creating the flag. You can edit or delete these if you require. </span></li>
+            <li><span>Scroll (or <a href="#" class="confirmation">click here</a>) to go the bottom of the page to confirm and create the flag.</span></li>
+          </ol>
+          <p style="font-size:1em;">By continuing, you are confirming that you wish to add the Patient Impairments and Reasonable Adjustments(s) to this flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
+
+        </div>
+
 
                   </div>
               </div>
@@ -175,10 +182,13 @@
                                                   <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP<br/>
                                                   </td>
                                                   <td class="table-cta">
-                                                      <div class="medium-12 small-12 large-12 cell">
+                                                    <div class="medium-12 small-12 large-12 cell">
+                                                        <a class="button hollow primary small expanded">Edit</a>
+                                                    </div>
+                                                    <div class="medium-12 small-12 large-12 cell">
 
-                                                          <a class="button hollow alert small expanded">Delete</a>
-                                                      </div>
+                                                        <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
+                                                    </div>
                                                   </td>
                                               </tr>
                                               <tr>
@@ -188,17 +198,21 @@
                                                   <td class="table-update"><span class="update-date">10-May-2017 11:07</span><br/>James Smith (GO)<br/>Hillbrow GP Surgery<br/>Some Town<br/>Some County<br/>S76 8YP
                                                   </td>
                                                   <td class="table-cta">
-                                                      <div class="medium-12 small-12 large-12 cell">
-                                                          <a class="button hollow alert small expanded">Delete</a>
-                                                      </div>
+                                                    <div class="medium-12 small-12 large-12 cell">
+                                                        <a class="button hollow primary small expanded">Edit</a>
+                                                    </div>
+                                                    <div class="medium-12 small-12 large-12 cell">
+
+                                                        <a class="button hollow alert small expanded" data-open="confirm-delete-ra">Delete</a>
+                                                    </div>
                                                   </td>
                                               </tr>
                                           </tbody>
                                       </table>
                                   </div>
-                                  <div class="medium-12 small-12 large-12 cell">
+                                <!--  <div class="medium-12 small-12 large-12 cell">
                                       <a href="prototype-3-ra-impairment-v3.html" class="button primary" style="margin-bottom: 0; float: right; margin-right: 10px;">Add / Edit Patient Impairments</a>
-                                  </div>
+                                  </div>-->
                               </div>
                           </div>
                       </fieldset>
@@ -265,7 +279,7 @@
 
                                                 </tbody>
                                             </table>
-                                            <a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra-v3.html">Add / Edit Reasonable Adjustments</a>
+                                              <!--<a class="button primary" style="margin-bottom: 0; float: right;" href="prototype-3-ra-add-ra-v3.html">Add / Edit Reasonable Adjustments</a>-->
                                         </div>
                                     </div>
                                 </div>
@@ -273,12 +287,7 @@
                         </fieldset>
 
                         <br>
-                        <div class="callout secondary" id="confirmation">
-                        <h4>Confirmation Required</h4>
-                        <p style="font-size:1em;">By continuing, you are confirming that you wish to add the Patient Impairments and Reasonable Adjustments(s) to this flag. Any information entered into this flag will be shared nationally with organisations that provide direct care across the NHS.</p>
 
-
-                        </div>
 
                     </div>
                 </div>
@@ -289,10 +298,10 @@
                 <div class="grid-x grid-padding-x">
                 <div class="cell">
 
-                <a href="prototype-3-b-ra-added-confirmed-v3.html" class="button primary">Yes, I wish to add</a> &nbsp;
-                <a class="button ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
+                <a href="prototype-3-b-ra-added-confirmed-v3.html" class="button large primary">Yes, I wish to confirm</a> &nbsp;
+                <a class="button large ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
 
-<a class="button ghost" href="prototype-3-b-ra-created.html-v3">Cancel</a>
+<a class="button large ghost" href="prototype-3-b-ra-created.html-v3">Cancel</a>
 </div>
 </div>
 

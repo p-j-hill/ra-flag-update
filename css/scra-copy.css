@@ -119,7 +119,6 @@ body {
 
 .progressbar li {
   list-style-type: none;
-  display: block;
   float: left;
   width: 25%;
   text-align: center;
@@ -130,9 +129,7 @@ font-weight: 600;
 }
 
 .progressbar li a {
-  color: #007F3D;
-
-
+  color: #007F3D
 }
 
 .progressbar li:before{
@@ -169,7 +166,6 @@ content: none;
 
 .progressbar li.selected, li.done {
 color: #007F3D;
-display:block;
 }
 
 
@@ -243,7 +239,7 @@ background-color: #007F3D;
 
 .panel-info-group {
     margin-bottom: 20px;
-    position: relative;
+
 }
 
 .panel-info {
@@ -413,25 +409,58 @@ a.is-active:hover {
     color: #2273C1;
 }
 
-.ra-categories-list {
+#ra-categories-list {
+  position: relative;
   height: 300px;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-
+  flex-wrap: wrap;*/
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
 
 #ra-categories-list a {
   text-decoration: underline;
   line-height: 2;
 }
 
+.category-content {
+  padding: 1rem;
+  /*overflow-y: scroll; */
+  height: 340px;
+  border-radius: 5px;
+  border: 1px solid #ECECEC;
+  background-color: white;
+  color: #0a0a0a;
+  clear: both;
+
+  }
+
+
+
 ul.ra-categories-list{
   list-style: none;
   padding-left: 0;}
 
-#commsupport-list, #contact-list, #enviro-list {
-    display: none;
+#commsupport-list {
+  background: white;
+  position: absolute;
+  float: left;
+  display: block;
+  width: 427px;
+  margin-left: 70px;
+  padding-left: 15px;
+  max-height: 300px;
+  overflow-y: scroll;
+  border-left: 4px solid #ECECEC;
+  z-index: 10;
+}
+
+#contact-list, #enviro-list {
+  display: none;
 }
 
 #patient-summary {
@@ -543,16 +572,6 @@ tr {
     border: 1px solid #ddd;
     padding: 10px 20px;
     min-height: 292px;
-}
-
-.empty-state {
-    background: white;
-}
-.empty-state span {
-color: #415564;
-  font-size: 1.3em;
-  font-weight: bold;
-
 }
 
 .fieldset legend,
