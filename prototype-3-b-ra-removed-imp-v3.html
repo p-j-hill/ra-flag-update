@@ -160,7 +160,7 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
-                                                  <tr id="delete-ra1">
+                                                  <tr>
                                                       <td class="table-ra">Requires adjustment to provide Home Visits</td>
                                                       <td class="table-detail">John requires home visits from familiar staff for most care due to his anxiety and behavioural responses.
                                                       </td>
@@ -259,7 +259,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr id="delete-imp1">
+                                                <tr>
                                                     <td class="table-ra">Learning Disability</td>
                                                     <td class="table-detail">John has a moderate learning disability</td>
                                                     <td class="table-update"><span class="update-date">02-Jan-2017 09:10</span><br/>Jane Green (GP)<br/>Hillbrow GP Surgery<br/>Barnsley<br/>South Yorkshire<br/>S76 8YP
@@ -376,7 +376,7 @@
 
 
 
-    <div class="reveal large" id="confirm-delete-ra" data-reveal data-animation-out="fade-out-slow">
+    <div class="reveal large" id="confirm-delete-ra" data-reveal>
 
         <div class="grid-x">
             <div class="cell">
@@ -416,8 +416,8 @@
             </div>
         </form>
 
-        <a class="button primary delete-ra" data-close href="">Yes, I wish to delete this Reasonable Adjustment</a> &nbsp;
-        <a class="button ghost" data-close>Cancel</a> &nbsp;
+        <a class="button primary" href="prototype-4-ra-removed.html">Yes, I wish to delete this Reasonable Adjustment</a> &nbsp;
+        <a class="button ghost" href="prototype-3-b-ra-created-raimp-long-v3.html">Cancel</a> &nbsp;
 
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -425,7 +425,7 @@
   </button>
     </div>
 
-    <div class="reveal large" id="confirm-delete-ra-flag" data-reveal >
+    <div class="reveal large" id="confirm-delete-ra-flag" data-reveal>
 
         <div class="grid-x">
             <div class="cell">
@@ -466,8 +466,8 @@
             </div>
           </form>
 
-          <a class="button primary" href="prototype-3-ra-v3-removed.html">Yes, I wish to remove the Reasonable Adjustment flag</a> &nbsp;
-          <a class="button ghost" data-close>Cancel</a> &nbsp;
+          <a class="button primary" href="prototype-4-ra-removed.html">Yes, I wish to remove the Reasonable Adjustment flag</a> &nbsp;
+          <a class="button ghost" href="prototype-3-b-ra-created-raimp-long-v3.html">Cancel</a> &nbsp;
 
 
           <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -475,7 +475,7 @@
           </button>
     </div>
 
-    <div class="reveal large" id="confirm-delete-impairment" data-reveal data-animation-out="fade-out-slow">
+    <div class="reveal large" id="confirm-delete-impairment" data-reveal>
 
       <div class="grid-x">
           <div class="cell">
@@ -515,8 +515,8 @@
           </div>
       </form>
 
-      <a class="button primary delete-imp" data-close>Yes, I wish to delete this Patient Impairment</a> &nbsp;
-      <a class="button ghost" data-close>Cancel</a> &nbsp;
+      <a class="button primary" href="prototype-4-ra-removed.html">Yes, I wish to delete this Patient Impairment</a> &nbsp;
+      <a class="button ghost" href="prototype-3-b-ra-created-raimp-long-v3.html">Cancel</a> &nbsp;
 
 
       <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -525,6 +525,22 @@
     </div>
 
 
+
+    <div class="reveal large ra-added" id="exampleModal3" data-reveal>
+
+        <div class="grid-x">
+            <div class="cell">
+                <br/>
+                <h3>Patient impairment successfully removed</h3><br/>
+            </div>
+        </div>
+
+        <a class="button ghost" href="#" data-close>Close</a>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
 
 
 
@@ -602,22 +618,19 @@ $(function() {
 
   }
 
-      $('.delete-imp').click(function(){
-        event.preventDefault();
-          $('#delete-imp1').css('background', 'lightgrey').css('color', 'white');
-          $('#delete-imp1').delay(1500).fadeOut(400);
-      });
-
-
-      $('.delete-ra').click(function(){
-        event.preventDefault();
-          $('#delete-ra1').css('background', 'lightgrey').css('color', 'white');
-          $('#delete-ra1').delay(1500).fadeOut(400);
-      });
-
-
 
         //# sourceURL=pen.js
+
+    </script>
+
+
+    <script>
+        $(document).foundation();
+        $(document).ready(function() {
+            $('#exampleModal3').foundation('open').delay(3000).fadeOut();
+            $(".reveal-overlay").delay(1000).fadeOut(1000);
+
+        });
 
     </script>
 </body>

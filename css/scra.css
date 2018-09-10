@@ -19,6 +19,11 @@ body {
   color: #dddddd;
 }
 
+.deleted-row{
+  background-color: red;
+  color: white;
+}
+
 .scrollToTop {
     width: 60px;
     height: 45px;
