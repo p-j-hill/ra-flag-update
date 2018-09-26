@@ -105,7 +105,16 @@
                     </ul>
 </div>
 
-      <br>
+<br>
+              <div class="callout primary">
+                <h4>Recording Consent</h4>
+
+
+                                    <p>Obtaining and managing consent for creating and updating the flag follows existing national guidance and local processes for recording consent and making best interest decisions.</p>
+                                    <p>Clinicians should create the flag in <a href="#/">best interests</a> for patients who are not able to provide consent, if adjustments in care would benefit the patient. </p>
+</div>
+
+          <br>
 
 <!--                    <h4 class="step">Step 1 of 2 -  Record Consent</h4><br/>-->
 
@@ -114,17 +123,33 @@
                     <form>
                         <div class="large-6 cell">
                             <input type="radio" name="pokemon" value="Red" id="pokemonRed" required onClick="ckChange(this)"><label for="pokemonRed">The patient</label><br/>
-                            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="best-interest" class="trigger"><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
+                            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="best-interest" class="trigger" onClick="ckChange(this)"><label for="q">Best interest decision made on behalf of patient (Mental Capacity Act 2005)</label>
                             <div id="best-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
                                 <label>Please provide more detail
                                 <input type="text" name="flavor">
                             </label>
                             </div>
                             <br/>
-                            <input type="radio" name="pokemon" value="Red" id="w" required onClick="ckChange(this)"><label for="w">Lasting power of attorney personal welfare</label>
+                            <input type="radio" name="pokemon" value="Red" id="w" data-trigger="personal-interest" class="trigger" required onClick="ckChange(this)"><label for="w">Lasting power of attorney personal welfare</label>
+                            <div id="personal-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
                             <br/>
-                            <input type="radio" name="pokemon" value="Red" id="e" required onClick="ckChange(this)"><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
+                            <input type="radio" name="pokemon" value="Red" id="e" data-trigger="health-interest" class="trigger" required onClick="ckChange(this)"><label for="e">Lasting power of attorney for health and welfare or court-appointed deputy or equivalent</label>
+                            <div id="health-interest" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
                             <br/>
+                            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="other" class="trigger" onClick="ckChange(this)"><label for="q">Other</label>
+                            <div id="other" name="reasondetail" class="large-6 medium-6 cell hidden">
+                                <label>Please provide more detail
+                                <input type="text" name="flavor">
+                            </label>
+                            </div>
 
                             <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
                             <div id="reason" class="large-6 medium-6 cell hide">
@@ -181,6 +206,7 @@
                 <br/>
                 <input type="radio" name="pokemon" value="Red" id="t" required><label for="t">Acting as an advocate for the client (for any other advocate)</label>
                 <br/>
+
                 <!-- <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Created in the patient's best interest</label><br/>
                 <div id="reason" class="large-6 medium-6 cell hide">
                     <label>Details of best interest
@@ -279,7 +305,7 @@
     <div class="reveal large" id="flag-exit" data-reveal>
         <br/>
         <h3>Cancel creating a Reasonable Adjustment flag</h3><br/>
-        <p>Please be aware that by cancelling at this stage the Reasonable Adjustment flag will not be created.</p><br/>
+        <p>Please be aware that by cancelling at this stage all of the information you have entered will be lost and the Reasonable Adjustment flag will not be created.</p><br/>
         <a class="button primary" href="prototype-3-ra-v3.html">Yes, I wish to cancel</a> &nbsp;
         <a class="button ghost " href="#" data-close>Continue creating flag</a>
 

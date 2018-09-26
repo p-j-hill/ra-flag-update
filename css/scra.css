@@ -251,6 +251,19 @@ background-color: #007F3D;
     position: relative;
 }
 
+.panel-info-1col {
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    margin-right: 20%;
+}
+
+.panel-info-2col {
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+}
+
 .panel-info {
     font-size: 14px;
     font-weight: 500;

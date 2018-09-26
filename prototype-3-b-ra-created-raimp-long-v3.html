@@ -153,9 +153,9 @@
                                               <thead>
                                                   <tr>
                                                       <th width="20%;">Reasonable Adjustment</th>
-                                                      <th width="40%;">Additional detail</th>
-                                                      <th>Category</th>
-                                                      <th>Updated</th>
+                                                      <th width="35%;">Additional detail</th>
+                                                      <th >Category</th>
+                                                      <th width="15%;">Updated</th>
                                                       <th></th>
                                                   </tr>
                                               </thead>
@@ -254,7 +254,7 @@
                                                 <tr>
                                                     <th width="20%;">Patient impairment</th>
                                                     <th width="40%;">Additional detail</th>
-                                                    <th>Added</th>
+                                                    <th >Added</th>
                                                     <th>...</th>
                                                 </tr>
                                             </thead>
@@ -341,13 +341,17 @@
                     </div>
                     <div class="large-6 medium-6 cell">
                         <fieldset class="fieldset">
-                            <span class="panel-main-label">Flag last updated:</span>
+                            <span class="panel-main-label">Flag details:</span>
                             <hr>
                             <div id="panel-key" class="grid-x">
                                 <div class="medium-12 large-12 cell">
-                                    <div class="panel-info-group cell">
-                                        <p><strong>16-May-2017 at 11:03 AM</strong><br/><br/>Jane Green (GP)<br/>Hillbrow GP Surgery<br/>Barnsley<br/>South Yorkahire<br/>S76 8YP<br/><br/>Tel: 0191 121121<br/>Email: <a href="#">email@address.com</a></p>
+                                    <div class="panel-info-1col ">
+                                        <p><strong>Created on:<br>16-May-2017 at 11:03 AM</strong><br/><br/>Jane Green (GP)<br/>Hillbrow GP Surgery<br/>Barnsley<br/>South Yorkahire<br/>S76 8YP<br/><br/>Tel: 0191 121121<br/>Email: <a href="#">email@address.com</a></p>
                                     </div>
+                                    <div class="panel-info-2col ">
+                                        <p><strong>Last updated on:<br>16-May-2017 at 11:03 AM</strong><br/><br/>Jane Green (GP)<br/>Hillbrow GP Surgery<br/>Barnsley<br/>South Yorkahire<br/>S76 8YP<br/><br/>Tel: 0191 121121<br/>Email: <a href="#">email@address.com</a></p>
+                                    </div>
+
                                 </div>
                             </div>
                         </fieldset>
@@ -388,22 +392,47 @@
 
         <form>
             <div class="large-6 cell">
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The reasonable adjustment was created in error</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="error-ra" class="trigger" required onClick="ckChange(this)"><label for="q">The reasonable adjustment was created in error</label>
+              <div id="error-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The reasonable adjustment was not correct</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="correct-ra" class="trigger" onClick="ckChange(this)"><label for="q">The reasonable adjustment was not correct</label>
+              <div id="correct-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The patient has dissented to the sharing of the reasonable adjustment</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="dissent-ra" class="trigger" onClick="ckChange(this)"><label for="q">The patient has dissented to the sharing of the reasonable adjustment</label>
+              <div id="dissent-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the sharing of the reasonable adjustment</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="legal-ra" class="trigger" onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the sharing of the reasonable adjustment</label>
+              <div id="legal-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-ra" class="trigger"><label for="pokemonRed">A best interest decision was taken to remove the reasonable adjustment</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-ra" class="trigger" required onClick="ckChange(this)"><label for="pokemonRed">A best interest decision was taken to remove the reasonable adjustment</label>
               <div id="best-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
                   <label>Please provide more detail
                   <input type="text" name="flavor">
               </label>
             </div>
             <br>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The reasonable adjustment no longer applies to the patient</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="applies-ra" class="trigger" onClick="ckChange(this)"><label for="q">The reasonable adjustment no longer applies to the patient</label>
+              <div id="applies-ra" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
 
 <br/>
@@ -438,22 +467,42 @@
 
           <form>
             <div class="large-6 cell">
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-flag" class="trigger"><label for="pokemonRed">A best interest decision was taken to remove Reasonable Adjustment flag</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-flag" class="trigger"  onClick="ckChange(this)"><label for="pokemonRed">A best interest decision was taken to remove Reasonable Adjustment flag</label>
               <div id="best-flag" name="reasondetail" class="large-6 medium-6 cell hidden">
                   <label>Please provide more detail
                   <input type="text" name="flavor">
               </label>
             </div>
             <br>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The Reasonable Adjustment flag was created in error</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="error-flag" class="trigger" onClick="ckChange(this)"><label for="q">The Reasonable Adjustment flag was created in error</label>
+              <div id="error-flag" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
 
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The patient has dissented to the creation of the Reasonable Adjustment flag</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="dissent-flag" class="trigger" onClick="ckChange(this)"><label for="q">The patient has dissented to the creation of the Reasonable Adjustment flag</label>
+              <div id="dissent-flag" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the creation of the Reasonable Adjustment flag</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="proxy-flag" class="trigger" onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the creation of the Reasonable Adjustment flag</label>
+              <div id="proxy-flag" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
 
             <br>
-              <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The Reasonable Adjustment flag no longer applies to the patient</label>
+              <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="applies-flag" class="trigger" onClick="ckChange(this)"><label for="q">The Reasonable Adjustment flag no longer applies to the patient</label>
+              <div id="applies-flag" name="reasondetail" class="large-6 medium-6 cell hidden">
+                  <label>Please provide more detail
+                  <input type="text" name="flavor">
+              </label>
+            </div>
               <br/>
 
           <br/>
@@ -487,22 +536,47 @@
 
       <form>
           <div class="large-6 cell">
-            <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The impairment was created in error</label>
+            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="error-imp" class="trigger" onClick="ckChange(this)"><label for="q">The impairment was created in error</label>
+            <div id="error-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
+                <label>Please provide more detail
+                <input type="text" name="flavor">
+            </label>
+          </div>
             <br/>
-            <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The impairment not correct</label>
+            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="correct-imp" class="trigger" onClick="ckChange(this)"><label for="q">The impairment not correct</label>
+            <div id="correct-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
+                <label>Please provide more detail
+                <input type="text" name="flavor">
+            </label>
+          </div>
             <br/>
-            <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The patient has dissented to the sharing of the impairment</label>
+            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="dissent-imp" class="trigger" onClick="ckChange(this)"><label for="q">The patient has dissented to the sharing of the impairment</label>
+            <div id="dissent-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
+                <label>Please provide more detail
+                <input type="text" name="flavor">
+            </label>
+          </div>
             <br/>
-            <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the sharing of the impairment</label>
+            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="legal-imp" class="trigger" onClick="ckChange(this)"><label for="q">The Legal Proxy has dissented to the sharing of the impairment</label>
+            <div id="legal-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
+                <label>Please provide more detail
+                <input type="text" name="flavor">
+            </label>
+          </div>
             <br/>
-            <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-imp" class="trigger"><label for="pokemonRed">A best interest decision was taken to remove the impairment</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed" data-trigger="best-imp" class="trigger" onClick="ckChange(this)"><label for="pokemonRed">A best interest decision was taken to remove the impairment</label>
             <div id="best-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
                 <label>Please provide more detail
                 <input type="text" name="flavor">
             </label>
           </div>
           <br>
-            <input type="radio" name="pokemon" value="Red" id="q" required  required onClick="ckChange(this)"><label for="q">The impairment no longer applies to the patient</label>
+            <input type="radio" name="pokemon" value="Red" id="q" required  data-trigger="applies-imp" class="trigger" onClick="ckChange(this)"><label for="q">The impairment no longer applies to the patient</label>
+            <div id="applies-imp" name="reasondetail" class="large-6 medium-6 cell hidden">
+                <label>Please provide more detail
+                <input type="text" name="flavor">
+            </label>
+          </div>
             <br/>
 
 <br/>
