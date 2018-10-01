@@ -98,14 +98,14 @@
                                       <div class="cell">
 
                                         <br/>
-                                        <h3>Create a Reasonable Adjustment flag</h3><br/>
+                                        <h3>Add Reasonable Adjustments to flag</h3><br/>
                                         <div class="container-progress">
-                                        <ul class="progressbar">
-                                          <li class="done"><a href="prototype-3-ra-consent-v3.html">Record Consent</a></li>
-                                          <li class="done"><a href="prototype-3-ra-impairment-v3.html">Patient Impairments</a></li>
-                                          <li class="selected">Reasonable Adjustments</li>
-                                          <li >Review and Save</li>
-                                        </ul>
+                                          <ul class="progressbar">
+                                            <li class="ticked-no-edit">Record Consent</li>
+                                            <li class="ticked-no-edit">Patient Impairments</li>
+                                            <li class="selected">Reasonable Adjustments</li>
+                                            <li >Review and Save</li>
+                                          </ul>
                     </div>
 
 
@@ -303,9 +303,8 @@
                   <hr width="95%" >
                   <div class="grid-x grid-padding-x">
                   <div class="cell">
-                  <a class="button large primary" href="prototype-3-b-ra-added-v3.html">Next</a> &nbsp;
-                  <a class="button large ghost" href="javascript: history.go(-1)">Back</a> &nbsp;
-                  <a class="button large ghost" href="#" data-open="flag-exit">Save & Create</a>
+                  <a class="button large primary" href="prototype-3-b-addjustment-review01-v3.html">Next</a> &nbsp;
+                  <a class="button large ghost" href="#" data-open="flag-exit">Cancel</a> &nbsp;
 </div>
 
                 </div>
@@ -325,17 +324,15 @@
 
     <div class="reveal large" id="flag-exit" data-reveal>
         <br/>
-        <h3>Are you sure you want to save and create this flag?</h3><br/>
-        <p>Any impairments or reasonable adjustments you have selected or suggested will be added to the flag. Further detail may be added or removed from the flag at any time.</p><br/>
-        <a class="button primary" href="prototype-3-b-ra-added-conimp-v3.html">Save and create flag</a> &nbsp;
-        <a class="button ghost " href="#" data-close>Continue adding to the flag</a>
+        <h3>Cancel editing a Reasonable Adjustment flag</h3><br/>
+        <p>Please be aware that by cancelling will mean changes to the Reasonable Adjustment flag will not be saved.</p><br/>
+        <a class="button primary" href="prototype-3-b-ra-created-noadjustments-v3.html">Yes, I wish to cancel</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Continue editing flag</a>
 
-        <a class="button ghost " href="prototype-3-ra-v3.html" data-close>Cancel without saving</a>
         <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>
-    </button>
+  </button>
     </div>
-
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

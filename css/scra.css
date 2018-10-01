@@ -218,6 +218,33 @@ background-color: #f0f4f5;
 background-color: #007F3D;
 }
 
+
+
+.progressbar li.ticked-no-edit:before {
+border-color: #f0f4f5;
+content: '✓';
+font-size: 2rem;
+
+}
+
+.progressbar li.ticked-no-edit-num:before {
+border-color: #f0f4f5;
+
+
+}
+
+.progressbar li.done-grey:before {
+border-color: #007F3D;
+color: #007F3D;
+content: '✓';
+font-size: 2rem;
+
+}
+
+.progressbar li.done-grey + li:after {
+background-color: #f0f4f5;
+}
+
 /* Step Indicator End*/
 
 .summary-label {
